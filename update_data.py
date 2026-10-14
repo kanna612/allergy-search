@@ -14,99 +14,86 @@ req = urllib.request.Request(
 response = urllib.request.urlopen(req, timeout=15)
 raw_bytes = response.read()
 
-# 湖池屋のShift_JISエンコーディング対応
-html = None
-for enc in ["cp932", "shift_jis", "utf-8"]:
-    try:
-        html = raw_bytes.decode(enc)
-        break
-    except UnicodeDecodeError:
-        continue
+# 【文字化け対策の決定版】
+# 自動判別ではなく、BeautifulSoupの文字コード自動変換機能（UnicodeDammit）に委ねる
+soup = BeautifulSoup(raw_bytes, "html.parser", from_encoding="utf-8")
+if not soup.find("table"):
+    soup = BeautifulSoup(raw_bytes, "html.parser", from_encoding="cp932")
 
-if not html:
-    html = raw_bytes.decode("cp932", errors="replace")
-
-soup = BeautifulSoup(html, "html.parser")
 table = soup.find("table")
 if not table:
     raise Exception("Allergen table not found.")
 
 rows = table.find_all("tr")
 
-# 1. アレルゲンヘッダーを厳密に取得してリスト化
+# --- アレルゲンヘッダーの正確な抽出 ---
 headers = []
+# 1行目の th/td をすべて取得
 header_cells = rows[0].find_all(["th", "td"])
 for cell in header_cells:
-    text = cell.get_text(strip=True)
-    headers.append(text)
-
-# "商品名"の次の列からがアレルゲン（卵、乳、小麦...）となるため、
-# アレルゲンの開始インデックスを特定
-try:
-    allergen_start_idx = headers.index("商品名") + 1
-except ValueError:
-    allergen_start_idx = 1 # 見つからなければデフォルトで1列目から
+    text = cell.get_text(strip=True).replace("\n", "").replace("\r", "").replace(" ", "")
+    # colspanが設定されている場合は、その数だけヘッダーを複製（ズレ防止の要）
+    colspan = int(cell.get("colspan", 1))
+    for _ in range(colspan):
+        headers.append(text)
 
 products = []
 current_brand = "その他"
 
-# 2. データの解析（行のズレを防止）
+# --- データ行の解析 ---
 for row in rows[1:]:
     cells = row.find_all(["td", "th"])
     if not cells:
         continue
     
-    # --- ブランド行（黄色の行）の判定 ---
-    # パターン1: thタグが1つだけの行
-    if len(cells) == 1 and row.find("th"):
+    # ブランド行（黄色い行）の判定
+    if len(cells) == 1 or (len(cells) > 0 and cells[0].has_attr("colspan") and int(cells[0].get("colspan", 1)) > 5):
         current_brand = cells[0].get_text(strip=True)
-        continue
-    # パターン2: colspanが設定されている行
-    if len(cells) == 1 and cells[0].has_attr("colspan"):
-        current_brand = cells[0].get_text(strip=True)
-        continue
-        
-    # --- 通常の商品行の判定 ---
-    # セル数がヘッダー数と大きく異なる場合は無視（レイアウト崩れ対策）
-    if len(cells) < allergen_start_idx:
         continue
 
+    # 商品列の取得
     name_cell = cells[0]
-    flavor_name = name_cell.get_text(strip=True)
+    flavor_name = name_cell.get_text(strip=True).replace('\u3000', ' ') # 全角スペースを半角に変換
     
-    # "商品名"という行自体や、空文字は無視
-    if not flavor_name or flavor_name == "商品名" or flavor_name in headers:
+    if not flavor_name or "商品名" in flavor_name:
         continue
 
-    # 終売アイコンのチェック
+    # 終売アイコン
     is_discontinued = bool(name_cell.find("img", src=re.compile(r"allergie_icon01\.gif")))
 
     allergens = []
     
-    # 実際のセルとヘッダー列の対応を厳密に取る
-    # 商品名が 0 番目、アレルゲンは 1 番目以降（allergen_start_idx から開始）
-    for i in range(allergen_start_idx, min(len(cells), len(headers))):
-        cell = cells[i]
-        # アレルゲンマーク（allergie_mark.gif）、または「●」などの文字があるか判定
-        has_img_mark = bool(cell.find("img", src=re.compile(r"allergie_mark\.gif")))
-        text_mark = cell.get_text(strip=True)
+    # 【アレルゲン列ズレ対策の決定版】
+    # HTML上のセルの位置（colspanを考慮）とヘッダーの位置を計算しながらマッピングする
+    current_col_index = 0
+    
+    for cell in cells:
+        colspan = int(cell.get("colspan", 1))
         
-        if has_img_mark or "●" in text_mark or "〇" in text_mark:
-            allergen_name = headers[i]
-            # 空白や改行が含まれる場合があるのでクリーンアップ
-            allergen_name = allergen_name.replace('\n', '').replace('\r', '').strip()
-            if allergen_name:
-                allergens.append(allergen_name)
+        # 商品名の列（通常は先頭の列）はアレルゲンチェックから除外
+        is_name_col = ("商品名" in headers[current_col_index] if current_col_index < len(headers) else False)
+        
+        if not is_name_col and current_col_index < len(headers):
+            has_img_mark = bool(cell.find("img", src=re.compile(r"allergie_mark\.gif")))
+            text_mark = cell.get_text(strip=True)
+            
+            # マークがあれば、該当する列のヘッダー名を取得
+            if has_img_mark or "●" in text_mark or "〇" in text_mark:
+                allergen_name = headers[current_col_index]
+                if allergen_name and allergen_name not in ["ブランド", "商品名"]:
+                    allergens.append(allergen_name)
+                    
+        current_col_index += colspan
 
     products.append({
         "brand": current_brand,
         "name": flavor_name,
         "discontinued": is_discontinued,
-        "allergens": allergens
+        "allergens": list(set(allergens)) # 重複を除外
     })
 
-# JSON保存
+# JSON保存（UTF-8で強制保存し、ブラウザ側での文字化けを防ぐ）
 with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
     json.dump(products, f, ensure_ascii=False, indent=2)
 
-print(f"Successfully parsed {len(products)} products with strict alignment.")
+print(f"Successfully parsed {len(products)} products.")
