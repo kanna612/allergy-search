@@ -1,685 +1,618 @@
 [
   {
-    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
-    "name": "���Τ��",
+    "brand": "湖池屋プライドポテト",
+    "name": "神のり塩",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
-    "name": "���ä�����",
+    "brand": "湖池屋プライドポテト",
+    "name": "ぞっこん岩塩",
     "discontinued": false,
     "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
+      "特定原材料に準ずるもの"
     ]
   },
   {
-    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
-    "name": "��Ǯ���󥽥�",
+    "brand": "湖池屋プライドポテト",
+    "name": "情熱コンソメ",
     "discontinued": false,
     "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
+      "特定原材料に準ずるもの"
     ]
   },
   {
-    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
-    "name": "�ɤϤޤ����ܥ",
+    "brand": "湖池屋プライドポテト",
+    "name": "ドはまり黒胡椒",
     "discontinued": false,
     "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
+      "特定原材料に準ずるもの"
     ]
   },
   {
-    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
-    "name": "���Ȥ����������",
+    "brand": "湖池屋プライドポテト",
+    "name": "心とろけるチーズ",
     "discontinued": true,
     "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
+      "特定原材料に準ずるもの"
     ]
   },
   {
-    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
-    "name": "GOLD�������Ի��ѡ������ζˤߤ���",
+    "brand": "湖池屋プライドポテト",
+    "name": "GOLD　食塩不使用　幸せの極みだし",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
-    "name": "���ΰ򡡺����ˤ��㤯�����",
+    "brand": "湖池屋プライドポテト",
+    "name": "幻の芋　今金男しゃく　岩塩",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
-    "name": "GOLD���ҤȤ������åȡ������Ի��� �����ζˤߤ���",
+    "brand": "湖池屋プライドポテト",
+    "name": "GOLD　ひとくちカット　食塩不使用 幸せの極みだし",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
-    "name": "�椺��̣�Ƥ�Ļ�ʵ��ԡ�",
+    "brand": "湖池屋プライドポテト",
+    "name": "ゆず七味焼き鳥（京都）",
     "discontinued": false,
     "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
+      "特定原材料に準ずるもの"
     ]
   },
   {
-    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
-    "name": "���ܤ줦�˾����ʽ�����",
+    "brand": "湖池屋プライドポテト",
+    "name": "こぼれうに醤油（宗像）",
     "discontinued": false,
     "allergens": [
-      "����̾",
-      "���긶����",
-      "���긶�����˽ऺ����"
+      "特定原材料",
+      "特定原材料に準ずるもの"
     ]
   },
   {
-    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
-    "name": "�������ˤ�ˤ������ʷ��ܡ�",
-    "discontinued": false,
-    "allergens": [
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
-    "name": "�ۤ��ƥХ�������ʸ��",
-    "discontinued": false,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "�ԥ奢�ݥƥ�",
-    "name": "���ۡ��ĥ��α��ȴ��",
+    "brand": "湖池屋プライドポテト",
+    "name": "あか牛にんにく醤油（熊本）",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "�ԥ奢�ݥƥ�",
-    "name": "ǻ���Τ��",
+    "brand": "湖池屋プライドポテト",
+    "name": "ほたてバター（縄文）",
+    "discontinued": false,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "ピュアポテト",
+    "name": "オホーツクの塩と岩塩",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "�ԥ奢�ݥƥ�",
-    "name": "Ķ���󥽥�",
-    "discontinued": true,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "�ԥ奢�ݥƥ�",
-    "name": "�椺��ܥ",
-    "discontinued": true,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "�ԥ奢�ݥƥ�",
-    "name": "������ݤ���",
-    "discontinued": true,
-    "allergens": []
-  },
-  {
-    "brand": "�ԥ奢�ݥƥ�",
-    "name": "���α� ����ϥޤ�ɤ� ������㡼������",
-    "discontinued": true,
-    "allergens": [
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "�ԥ奢�ݥƥ�",
-    "name": "������㡼������",
-    "discontinued": true,
-    "allergens": [
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "�ԥ奢�ݥƥ�",
-    "name": "We ������å�",
-    "discontinued": false,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "�ԥ奢�ݥƥ�",
-    "name": "�ӡ���&������",
-    "discontinued": false,
-    "allergens": [
-      "����̾",
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "�ԥ奢�ݥƥ�",
-    "name": "���ڤ�ҤȤ������åȡ����ۡ��ĥ��α��ȴ��",
+    "brand": "ピュアポテト",
+    "name": "濃いのり塩",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "���Ӳ����ȥ���",
-    "name": "���ݤ���ޤ�",
+    "brand": "ピュアポテト",
+    "name": "超コンソメ",
     "discontinued": true,
     "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
+      "特定原材料に準ずるもの"
     ]
   },
   {
-    "brand": "���Ӳ����ȥ���",
-    "name": "�ɥ���",
-    "discontinued": false,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "���Ӳ����ȥ���",
-    "name": "������꡼�४�˥����JAN�����ɡ�  4514410169852��",
+    "brand": "ピュアポテト",
+    "name": "ゆず胡椒",
     "discontinued": true,
     "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
+      "特定原材料に準ずるもの"
     ]
   },
   {
-    "brand": "���Ӳ����ȥ���",
-    "name": "������꡼�४�˥���",
-    "discontinued": false,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "���Ӳ����ȥ���",
-    "name": "����Τ�",
-    "discontinued": false,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "���Ӳ����ȥ���",
-    "name": "�ǥ�å����ԥ�",
-    "discontinued": true,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "���Ӳ����ȥ���",
-    "name": "�ߤ���ޤ�",
-    "discontinued": false,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "�ݥƥȥ��åץ�",
-    "name": "�Τ��",
-    "discontinued": false,
-    "allergens": []
-  },
-  {
-    "brand": "�ݥƥȥ��åץ�",
-    "name": "���㤬����ȱ�",
-    "discontinued": false,
-    "allergens": []
-  },
-  {
-    "brand": "�ݥƥȥ��åץ�",
-    "name": "��Υ��󥽥�",
-    "discontinued": false,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "�ݥƥȥ��åץ�",
-    "name": "������å�",
-    "discontinued": false,
-    "allergens": [
-      "���긶����"
-    ]
-  },
-  {
-    "brand": "�ݥƥȥ��åץ�",
-    "name": "�Τ����",
-    "discontinued": false,
-    "allergens": [
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "�ݥƥȥ��åץ�",
-    "name": "�ϥˡ����Х���",
-    "discontinued": false,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "�ݥƥȥ��åץ�",
-    "name": "GARAKU���������������ץ��졼̣",
-    "discontinued": true,
-    "allergens": [
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "�ݥƥȥ��åץ�",
-    "name": "VIVANT�ݥƥȥ��åץ���ǵ�ڤΤΤ��",
-    "discontinued": false,
-    "allergens": []
-  },
-  {
-    "brand": "�ݥƥȥ��åץ�",
-    "name": "VIVANT�ݥƥȥ��åץ������Υ��Х�",
-    "discontinued": false,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "�ݥƥȥ��åץ�",
-    "name": "���ƥ��å��ݥƥȡ��Τ��",
-    "discontinued": false,
-    "allergens": []
-  },
-  {
-    "brand": "�ݥƥȥ��åץ�",
-    "name": "���ƥ��å��ݥƥȡ����㤬����ȱ�",
-    "discontinued": false,
-    "allergens": []
-  },
-  {
-    "brand": "����ࡼ����",
-    "name": "����ࡼ������åץ����ۥåȥ���̣",
-    "discontinued": false,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "����ࡼ����",
-    "name": "�ſ�̵�¥���ࡼ���� ���˥����������",
-    "discontinued": false,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "����ࡼ����",
-    "name": "�µ�����ࡼ���� �㤨��蘆��",
-    "discontinued": false,
-    "allergens": [
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "����ࡼ����",
-    "name": "������VS����ࡼ���硡������㡼�εս�",
-    "discontinued": true,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "����ࡼ����",
-    "name": "���ƥ��å�����ࡼ���硡�ۥåȥ���̣",
-    "discontinued": false,
-    "allergens": [
-      "���긶����"
-    ]
-  },
-  {
-    "brand": "����ࡼ����",
-    "name": "���ƥ��å���Ӥ��ӥ���ࡼ���� �����ޤ蘆��",
-    "discontinued": false,
-    "allergens": [
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "����ࡼ����",
-    "name": "��ä��㥫��ࡼ���硡�ƤΤ�ߤĤ��ե����䡼",
-    "discontinued": true,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "����ࡼ����",
-    "name": "�����᥷ ����ࡼ���� �ɻ�!���ѥ������졼",
-    "discontinued": false,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "���äѥࡼ����",
-    "name": "���㤬���ޥӥͥ���",
-    "discontinued": false,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "���äѥࡼ����",
-    "name": "���äѤ���",
-    "discontinued": false,
-    "allergens": [
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "���äѥࡼ����",
-    "name": "��ä��㤹�äѥࡼ���硡�Ƥ��ֲ�����",
-    "discontinued": true,
-    "allergens": [
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "���äѥࡼ����",
-    "name": "���󥰥��ɥ�VS���äѥࡼ���硡�������ʷ�",
-    "discontinued": true,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "��Υݥƥ�",
-    "name": "��ߤĤ���",
-    "discontinued": false,
-    "allergens": []
-  },
-  {
-    "brand": "��Υݥƥ�",
-    "name": "��ƻ�Τ��",
-    "discontinued": false,
-    "allergens": []
-  },
-  {
-    "brand": "���Ӳ��ե�����",
-    "name": "����β��� �Ƥ���",
-    "discontinued": true,
-    "allergens": [
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "���Ӳ��ե�����",
-    "name": "��̣���ܤ� �����ĤΤ�",
+    "brand": "ピュアポテト",
+    "name": "豪快海苔しお",
     "discontinued": true,
     "allergens": []
   },
   {
-    "brand": "��������",
-    "name": "���ʾƤ��Ȥ��������",
-    "discontinued": false,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "��������",
-    "name": "��ߤĤ��С��٥��塼",
-    "discontinued": false,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "��������",
-    "name": "�Ȥ����륯���ȥ�������",
-    "discontinued": false,
-    "allergens": [
-      "���긶����"
-    ]
-  },
-  {
-    "brand": "��������",
-    "name": "��Ϸ�ΤȤꤳ",
-    "discontinued": false,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "��������",
-    "name": "�ߤˤ�ˤ�",
+    "brand": "ピュアポテト",
+    "name": "鬼ノ宴 鬼もハマる辛さ シラチャーソース",
     "discontinued": true,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
+    "allergens": []
   },
   {
-    "brand": "��������",
-    "name": "ǻ������ܥʡ���",
+    "brand": "ピュアポテト",
+    "name": "シラチャーソース",
     "discontinued": true,
+    "allergens": []
+  },
+  {
+    "brand": "ピュアポテト",
+    "name": "We ケチャップ",
+    "discontinued": false,
     "allergens": [
-      "����̾",
-      "���긶����",
-      "���긶�����˽ऺ����"
+      "特定原材料に準ずるもの"
     ]
   },
   {
-    "brand": "�ɥ󥿥���",
-    "name": "�ӡ��ե��꥿����",
+    "brand": "ピュアポテト",
+    "name": "ビーフ&チーズ",
+    "discontinued": false,
+    "allergens": [
+      "特定原材料",
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "ピュアポテト",
+    "name": "厚切りひとくちカット　オホーツクの塩と岩塩",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "�ɥ󥿥���",
-    "name": "���������꥿����",
-    "discontinued": false,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "�ɥ󥿥���",
-    "name": "�����������꥿����",
+    "brand": "湖池屋ストロング",
+    "name": "海苔ざんまい",
     "discontinued": true,
     "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
+      "特定原材料に準ずるもの"
     ]
   },
   {
-    "brand": "�ݥ�󥭡�",
-    "name": "���ä��ꥳ����",
+    "brand": "湖池屋ストロング",
+    "name": "辛レモン",
     "discontinued": false,
     "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
+      "特定原材料に準ずるもの"
     ]
   },
   {
-    "brand": "�ݥ�󥭡�",
-    "name": "��󤿤�����",
+    "brand": "湖池屋ストロング",
+    "name": "サワークリームオニオン（JANコード：  4514410169852）",
+    "discontinued": true,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "湖池屋ストロング",
+    "name": "サワークリームオニオン",
     "discontinued": false,
     "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
+      "特定原材料に準ずるもの"
     ]
   },
   {
-    "brand": "�ݥ�󥭡�",
-    "name": "����å��ꤨ�ӥݥ�󥭡������ӱ�",
-    "discontinued": true,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "�ݥ�󥭡�",
-    "name": "���ӱ�",
+    "brand": "湖池屋ストロング",
+    "name": "豪快のり",
     "discontinued": false,
     "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
+      "特定原材料に準ずるもの"
     ]
   },
   {
-    "brand": "��������",
-    "name": "���ƥ���������",
+    "brand": "湖池屋ストロング",
+    "name": "デラックスピザ",
     "discontinued": true,
     "allergens": [
-      "����̾",
-      "���긶����",
-      "���긶�����˽ऺ����"
+      "特定原材料に準ずるもの"
     ]
   },
   {
-    "brand": "��������",
-    "name": "�ȥ��ե�����",
-    "discontinued": true,
+    "brand": "湖池屋ストロング",
+    "name": "梅ざんまい",
+    "discontinued": false,
     "allergens": [
-      "����̾",
-      "���긶����",
-      "���긶�����˽ऺ����"
+      "特定原材料に準ずるもの"
     ]
   },
   {
-    "brand": "�����Хå�",
-    "name": "���ƥ��å��ݥƥȡ��Τ��",
+    "brand": "ポテトチップス",
+    "name": "のり塩",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "�����Хå�",
-    "name": "���ƥ��å��ݥƥȡ���Υ��󥽥�",
-    "discontinued": false,
-    "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "�����Хå�",
-    "name": "���ƥ��å�����ࡼ���硡�ۥåȥ���̣",
-    "discontinued": false,
-    "allergens": [
-      "���긶����"
-    ]
-  },
-  {
-    "brand": "�����Хå�",
-    "name": "���ƥ��å����äѥࡼ���� ���äѤ���",
-    "discontinued": false,
-    "allergens": [
-      "���긶�����˽ऺ����"
-    ]
-  },
-  {
-    "brand": "�����Хå�",
-    "name": "�ԥ奢�ݥƥȡ����ڤ�ҤȤ������åȡ����ۡ��ĥ��α��ȴ��",
+    "brand": "ポテトチップス",
+    "name": "じゃがいもと塩",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "�����Хå�",
-    "name": "���Ӳ��ץ饤�ɥݥƥȡ��ҤȤ������åȡ����Τ��",
+    "brand": "ポテトチップス",
+    "name": "金のコンソメ",
+    "discontinued": false,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "ポテトチップス",
+    "name": "ガーリック",
+    "discontinued": false,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "ポテトチップス",
+    "name": "のり醤油",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "�����Хå�",
-    "name": "���Ӳ��ץ饤�ɥݥƥȡ��ҤȤ������åȡ����ä�����",
+    "brand": "ポテトチップス",
+    "name": "ハニー＆バター",
     "discontinued": false,
     "allergens": [
-      "���긶����",
-      "���긶�����˽ऺ����"
+      "特定原材料に準ずるもの"
     ]
   },
   {
-    "brand": "���ĤǤ����å�",
-    "name": "���ƥ��å�����ࡼ���� �ۥåȥ���̣",
+    "brand": "ポテトチップス",
+    "name": "GARAKU　和風だしスープカレー味",
+    "discontinued": true,
+    "allergens": []
+  },
+  {
+    "brand": "ポテトチップス",
+    "name": "VIVANTポテトチップス　乃木ののり塩",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "ポテトチップス",
+    "name": "VIVANTポテトチップス　野崎のケバブ",
     "discontinued": false,
     "allergens": [
-      "���긶����"
+      "特定原材料に準ずるもの"
     ]
   },
   {
-    "brand": "���ĤǤ����å�",
-    "name": "�ȥ�ƥ������åץ�����̣",
+    "brand": "ポテトチップス",
+    "name": "スティックポテト　のり塩",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "ポテトチップス",
+    "name": "スティックポテト　じゃがいもと塩",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "カラムーチョ",
+    "name": "カラムーチョチップス　ホットチリ味",
     "discontinued": false,
     "allergens": [
-      "���긶�����˽ऺ����"
+      "特定原材料に準ずるもの"
     ]
   },
   {
-    "brand": "PinkyFRESH",
-    "name": "�����θ���ۡ����꡼��ߥ��̣ 90γ",
+    "brand": "カラムーチョ",
+    "name": "甘辛無限カラムーチョ ヤンニョムだれチキン",
+    "discontinued": false,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "カラムーチョ",
+    "name": "和牛カラムーチョ 冴えるわさび",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "カラムーチョ",
+    "name": "ゴジラVSカラムーチョ　シラチャーの逆襲",
+    "discontinued": true,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "カラムーチョ",
+    "name": "スティックカラムーチョ　ホットチリ味",
+    "discontinued": false,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "カラムーチョ",
+    "name": "スティックわびさびカラムーチョ 肉ウマわさび",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "カラムーチョ",
+    "name": "めっちゃカラムーチョ　夏のやみつきファイヤー",
+    "discontinued": true,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "カラムーチョ",
+    "name": "完全メシ カラムーチョ 辛旨!スパイスカレー",
+    "discontinued": false,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "すっぱムーチョ",
+    "name": "じゃがうまビネガー",
+    "discontinued": false,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "すっぱムーチョ",
+    "name": "さっぱり梅",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "すっぱムーチョ",
+    "name": "めっちゃすっぱムーチョ　夏の爽快シャワー",
+    "discontinued": true,
+    "allergens": []
+  },
+  {
+    "brand": "すっぱムーチョ",
+    "name": "キングギドラVSすっぱムーチョ　海鮮総進撃",
+    "discontinued": true,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "金のポテト",
+    "name": "やみつき塩",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "金のポテト",
+    "name": "王道のり塩",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "湖池屋ファーム",
+    "name": "黄金の果肉 焼き塩",
+    "discontinued": true,
+    "allergens": []
+  },
+  {
+    "brand": "湖池屋ファーム",
+    "name": "旨味こぼれ すじ青のり",
+    "discontinued": true,
+    "allergens": []
+  },
+  {
+    "brand": "スコーン",
+    "name": "絶品焼きとうもろこし",
+    "discontinued": false,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "スコーン",
+    "name": "やみつきバーベキュー",
+    "discontinued": false,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "スコーン",
+    "name": "とろけるクアトロチーズ",
+    "discontinued": false,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "スコーン",
+    "name": "海老のとりこ",
+    "discontinued": false,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "スコーン",
+    "name": "梅にんにく",
+    "discontinued": true,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "スコーン",
+    "name": "濃厚カルボナーラ",
+    "discontinued": true,
+    "allergens": [
+      "特定原材料",
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "ドンタコス",
+    "name": "ビーフチリタコス",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "ドンタコス",
+    "name": "チーズチリタコス",
+    "discontinued": false,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "ドンタコス",
+    "name": "海鮮グリルチリタコス",
+    "discontinued": true,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "ポリンキー",
+    "name": "あっさりコーン",
+    "discontinued": false,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "ポリンキー",
+    "name": "めんたいあじ",
+    "discontinued": false,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "ポリンキー",
+    "name": "カリッカリえびポリンキー　えび塩",
+    "discontinued": true,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "ポリンキー",
+    "name": "えび塩",
+    "discontinued": false,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "生・チー",
+    "name": "メルティーチーズ",
+    "discontinued": true,
+    "allergens": [
+      "特定原材料",
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "生・チー",
+    "name": "トリュフチーズ",
+    "discontinued": true,
+    "allergens": [
+      "特定原材料",
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "スリムバッグ",
+    "name": "スティックポテト　のり塩",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "スリムバッグ",
+    "name": "スティックポテト　金のコンソメ",
+    "discontinued": false,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "スリムバッグ",
+    "name": "スティックカラムーチョ　ホットチリ味",
+    "discontinued": false,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "スリムバッグ",
+    "name": "スティックすっぱムーチョ さっぱり梅",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "スリムバッグ",
+    "name": "ピュアポテト　厚切りひとくちカット　オホーツクの塩と岩塩",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "スリムバッグ",
+    "name": "湖池屋プライドポテト　ひとくちカット　神のり塩",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "スリムバッグ",
+    "name": "湖池屋プライドポテト　ひとくちカット　ぞっこん岩塩",
+    "discontinued": false,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "いつでもチャック",
+    "name": "スティックカラムーチョ ホットチリ味",
+    "discontinued": false,
+    "allergens": [
+      "特定原材料に準ずるもの"
+    ]
+  },
+  {
+    "brand": "いつでもチャック",
+    "name": "トルティアチップス　塩味",
     "discontinued": false,
     "allergens": []
   },
   {
     "brand": "PinkyFRESH",
-    "name": "�����θ���ۡ����꡼��ߥ��̣ 60γ",
+    "name": "【通販限定】　クリーンミント味 90粒",
     "discontinued": false,
     "allergens": []
   },
   {
     "brand": "PinkyFRESH",
-    "name": "�����θ���ۡ��衼�����̣ 60γ",
+    "name": "【通販限定】　クリーンミント味 60粒",
     "discontinued": false,
     "allergens": []
   },
   {
     "brand": "PinkyFRESH",
-    "name": "�����θ���ۡ����졼��̣ 60γ",
+    "name": "【通販限定】　ヨーグルト味 60粒",
     "discontinued": false,
     "allergens": []
   },
   {
     "brand": "PinkyFRESH",
-    "name": "�����θ���ۡ����꡼��ߥ��̣ ʬ��",
+    "name": "【通販限定】　グレープ味 60粒",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "������LS1",
-    "name": "�����θ����POWDER �ҥ���������",
+    "brand": "PinkyFRESH",
+    "name": "【通販限定】　クリーンミント味 分包",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "乳酸菌LS1",
+    "name": "【通販限定】POWDER ヒアルロン酸＋",
     "discontinued": false,
     "allergens": []
   }
