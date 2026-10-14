@@ -112,4 +112,6 @@ for row in rows[header_row_index + 1:]:
 
 # Save output
 with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-    json.dump(products, f,
+    json.dump(products, f,ensure_ascii=False, indent=2)
+
+print(f"Successfully processed {len(products)} products.")
