@@ -25,12 +25,16 @@ if not table:
 
 rows = table.find_all("tr")
 
-# --- Step A: Find the true allergen names header row ---
+# --- 1. Map the true allergen headers accurately ---
 headers = []
-for row in rows[:10]:
-    cell_texts = [c.get_text(strip=True) for c in row.find_all(["th", "td"])]
-    # The true allergen row contains '卵' and '小麦'
-    if any(t == "卵" for t in cell_texts) and any(t == "小麦" for t in cell_texts):
+header_row_index = 0
+
+for i, row in enumerate(rows[:10]):
+    cell_texts = [c.get_text(strip=True).replace("\n", "").replace("\r", "") for c in row.find_all(["th", "td"])]
+    # Look for the row that actually contains the allergen names
+    if "卵" in cell_texts and "小麦" in cell_texts:
+        header_row_index = i
+        # Expand any colspans just in case, though subheaders rarely have them
         for cell in row.find_all(["th", "td"]):
             txt = cell.get_text(strip=True).replace("\n", "").replace("\r", "").strip()
             colspan = int(cell.get("colspan", 1))
@@ -38,83 +42,74 @@ for row in rows[:10]:
                 headers.append(txt)
         break
 
-# If the header row omitted '商品名' due to rowspan, prepend it
-if headers and headers[0] != "商品名":
+# The header row we extracted might be missing the "商品名" (Product Name) at index 0 
+# because it was merged (rowspan) from the row above it.
+if headers and headers[0] == "卵":
     headers.insert(0, "商品名")
 
-# Fallback if table layout changes unexpectedly
-if not headers:
-    headers = [
-        "商品名", "卵", "乳", "小麦", "そば", "落花生", "えび", "かに", "くるみ",
-        "アーモンド", "あわび", "いか", "いくら", "オレンジ", "カシューナッツ", "キウイ",
-        "牛肉", "ごま", "さけ", "さば", "大豆", "鶏肉", "豚肉", "バナナ", "まつたけ",
-        "もも", "やまいも", "りんご", "ゼラチン", "魚介類"
-    ]
-
-print("Detected allergen columns:", headers[1:])
+print("Mapped Header Indices:")
+for idx, h in enumerate(headers):
+    print(f"  Col {idx}: {h}")
 
 products = []
 current_brand = "その他"
 
-# --- Step B: Parse all products and align allergen marks ---
-for row in rows:
+# --- 2. Process product rows with strict index alignment ---
+for row in rows[header_row_index + 1:]:
     cells = row.find_all(["td", "th"])
     if not cells:
         continue
 
-    cell_texts = [c.get_text(strip=True) for c in cells]
-
-    # Skip header rows
-    if any(t in ["特定原材料", "特定原材料に準ずるもの"] for t in cell_texts):
-        continue
-    if any(t == "卵" for t in cell_texts) and any(t == "小麦" for t in cell_texts):
-        continue
-
-    # Identify brand rows (yellow section headers)
+    # Identify brand section headers (yellow rows)
+    # They usually have 1 cell with a large colspan, or just a single th element
     if len(cells) == 1 or (cells[0].has_attr("colspan") and int(cells[0].get("colspan", 1)) > 5):
         brand_text = cells[0].get_text(strip=True)
-        if brand_text and brand_text not in ["商品名", "アレルギー情報一覧表"]:
+        if brand_text and "商品名" not in brand_text:
             current_brand = brand_text
         continue
 
-    # Product Flavor Name
+    # The first cell of a product row is the product name
     name_cell = cells[0]
     flavor_name = name_cell.get_text(strip=True).replace('\u3000', ' ')
-    if not flavor_name or flavor_name in ["商品名", "アレルギー情報一覧表"]:
+    
+    # Skip if it's a repeated header row
+    if not flavor_name or flavor_name == "商品名" or "特定原材料" in flavor_name:
         continue
 
-    # Check for discontinued icon (allergie_icon01.gif)
     is_discontinued = bool(name_cell.find("img", src=re.compile(r"allergie_icon01\.gif")))
 
-    # Check for allergen marks (allergie_mark.gif or text symbols)
     allergens = []
-    col_idx = 0
-
-    for cell in cells:
+    
+    # In product rows, index 0 is always the product name.
+    # Therefore, the data cells start at index 1.
+    # We loop through the remaining cells and map them to headers[1], headers[2], etc.
+    data_cells = cells[1:]
+    
+    # We must track the logical column index to account for any data colspans
+    logical_col_idx = 1 
+    
+    for cell in data_cells:
         colspan = int(cell.get("colspan", 1))
-
-        # Ignore the first column (Product Name)
-        if col_idx > 0 and col_idx < len(headers):
+        
+        if logical_col_idx < len(headers):
             has_img_mark = bool(cell.find("img", src=re.compile(r"allergie_mark\.gif")))
             text_val = cell.get_text(strip=True)
             has_text_mark = any(m in text_val for m in ["●", "〇", "○", "1", "含む"])
 
             if has_img_mark or has_text_mark:
-                allergen_name = headers[col_idx]
-                if allergen_name and allergen_name not in ["商品名", "特定原材料", "特定原材料に準ずるもの"]:
+                allergen_name = headers[logical_col_idx]
+                if allergen_name and allergen_name not in ["商品名", "ブランド"]:
                     allergens.append(allergen_name)
-
-        col_idx += colspan
+                    
+        logical_col_idx += colspan
 
     products.append({
         "brand": current_brand,
         "name": flavor_name,
         "discontinued": is_discontinued,
-        "allergens": list(dict.fromkeys(allergens)) # remove duplicates while preserving order
+        "allergens": list(dict.fromkeys(allergens)) # remove duplicates, preserve order
     })
 
-# Save as UTF-8 JSON
+# Save output
 with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-    json.dump(products, f, ensure_ascii=False, indent=2)
-
-print(f"Successfully processed {len(products)} products with accurate allergens.")
+    json.dump(products, f,
