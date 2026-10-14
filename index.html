@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>湖池屋 アレルギー情報検索</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .allergen-btn.selected {
+      background-color: #dc2626;
+      color: #ffffff;
+      border-color: #dc2626;
+    }
+    .allergen-btn.selected::after { content: " ✕"; font-weight: bold; }
+    .brand-header-yellow { background-color: #fff3a8; border-left: 6px solid #eab308; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <header class="text-center mb-8">
+      <h1 class="text-3xl font-extrabold text-slate-900 flex items-center justify-center gap-2">
+        <span class="text-red-600">🥔</span> 湖池屋 商品アレルギー情報検索
+      </h1>
+      <p class="text-sm text-slate-500 mt-2">毎週自動更新される公式データに基づき、選択した物質を<strong>含まない安心な商品</strong>を表示します。</p>
+    </header>
+
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-8">
+      <div class="border-b border-slate-200 pb-4 mb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+          <h2 class="text-lg font-bold text-red-600">🛡️ 避けたいアレルギー物質を選択してください（複数選択可）</h2>
+          <p class="text-xs text-slate-500 mt-1">選んだ物質が<strong>含まれていない</strong>商品のみを抽出します。</p>
+        </div>
+        <div class="flex gap-2 text-xs">
+          <button id="selectAllMajorBtn" class="px-3 py-1.5 rounded-lg border border-slate-300 hover:bg-slate-100">特定8品目を全選択</button>
+          <button id="clearAllBtn" class="px-3 py-1.5 rounded-lg border border-slate-300 hover:bg-slate-100">全解除</button>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <span class="text-xs font-bold text-red-700 bg-red-100 px-2 py-0.5 rounded">義務表示</span>
+        <div id="majorAllergenList" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2 mt-2"></div>
+      </div>
+
+      <div class="mb-6">
+        <span class="text-xs font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">推奨表示</span>
+        <div id="minorAllergenList" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2 mt-2"></div>
+      </div>
+
+      <div class="pt-4 border-t border-slate-100 flex flex-col items-center">
+        <button id="searchSubmitBtn" class="w-full sm:w-80 bg-red-600 hover:bg-red-700 text-white font-bold text-base py-3.5 px-6 rounded-xl shadow-md transition">
+          🔍 この条件で検索する
+        </button>
+        <span id="selectedSummary" class="text-xs text-slate-500 mt-2">全商品を表示中</span>
+      </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+      <div class="flex items-center gap-2">
+        <h2 class="text-xl font-bold">検索結果</h2>
+        <span id="resultCountBadge" class="bg-red-100 text-red-700 font-bold text-sm px-3 py-0.5 rounded-full">0 件</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs font-medium text-slate-600">
+        <label class="flex items-center gap-1.5 cursor-pointer">
+          <input type="checkbox" id="includeDiscontinued" checked class="rounded text-red-600">
+          <span>終売品（賞味期限内）を含む</span>
+        </label>
+        <input type="text" id="keywordFilter" placeholder="商品名で絞込..." class="border border-slate-300 rounded-lg px-2.5 py-1 text-xs w-44">
+      </div>
+    </div>
+
+    <div id="resultsContainer" class="space-y-6">
+      <div class="text-center py-12 text-slate-400">データを読み込み中...</div>
+    </div>
+  </div>
+
+  <script>
+    const MAJOR_ALLERGENS = ["卵", "乳", "小麦", "えび", "かに", "くるみ", "そば", "落花生"];
+    const MINOR_ALLERGENS = ["アーモンド","あわび","いか","いくら","オレンジ","カシューナッツ","キウイフルーツ","牛肉","ごま","さけ","さば","大豆","鶏肉","バナナ","豚肉","マカダミアナッツ","まつたけ","もも","やまいも","りんご","ゼラチン","魚介類"];
+    const selectedAvoidAllergens = new Set();
+    let KOIKEYA_PRODUCTS = [];
+
+    const majorContainer = document.getElementById("majorAllergenList");
+    const minorContainer = document.getElementById("minorAllergenList");
+    const searchSubmitBtn = document.getElementById("searchSubmitBtn");
+    const resultsContainer = document.getElementById("resultsContainer");
+    const resultCountBadge = document.getElementById("resultCountBadge");
+    const includeDiscontinued = document.getElementById("includeDiscontinued");
+    const keywordFilter = document.getElementById("keywordFilter");
+
+    function createButtons(list, container) {
+      list.forEach(name => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "allergen-btn py-2 px-2.5 rounded-lg border border-slate-300 text-xs sm:text-sm font-semibold bg-white";
+        btn.textContent = name;
+        btn.dataset.allergen = name;
+        btn.addEventListener("click", () => {
+          if (selectedAvoidAllergens.has(name)) {
+            selectedAvoidAllergens.delete(name);
+            btn.classList.remove("selected");
+          } else {
+            selectedAvoidAllergens.add(name);
+            btn.classList.add("selected");
+          }
+        });
+        container.appendChild(btn);
+      });
+    }
+
+    function renderResults(items) {
+      resultCountBadge.textContent = `${items.length} 件`;
+      resultsContainer.innerHTML = "";
+
+      if (items.length === 0) {
+        resultsContainer.innerHTML = `<div class="bg-white rounded-xl p-8 text-center text-slate-500 border border-slate-200">該当する商品が見つかりませんでした。</div>`;
+        return;
+      }
+
+      const grouped = {};
+      items.forEach(p => {
+        if (!grouped[p.brand]) grouped[p.brand] = [];
+        grouped[p.brand].push(p);
+      });
+
+      Object.keys(grouped).forEach(brand => {
+        const section = document.createElement("div");
+        section.className = "bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden";
+        section.innerHTML = `
+          <div class="brand-header-yellow px-4 py-2.5 font-bold text-amber-950 flex justify-between">
+            <span>${brand}</span>
+            <span class="text-xs bg-amber-200/80 px-2 py-0.5 rounded-full">${grouped[brand].length} アイテム</span>
+          </div>
+          <div class="divide-y divide-slate-100">
+            ${grouped[brand].map(p => `
+              <div class="p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-slate-50">
+                <div class="flex items-center gap-2">
+                  <span class="font-bold text-slate-800">${p.name}</span>${p.discontinued ? '<span class="text-[11px] bg-amber-100 text-amber-800 border border-amber-300 px-1.5 py-0.5 rounded">終売</span>' : ''}
+                </div>
+                <div class="flex items-center gap-1 flex-wrap">
+                  ${p.allergens.length === 0 ? '<span class="text-xs text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-bold">アレルゲンなし</span>' : p.allergens.map(a => `<span class="text-xs font-bold px-2 py-0.5 rounded ${MAJOR_ALLERGENS.includes(a) ? 'bg-red-50 text-red-700 border border-red-200' : 'bg-orange-50 text-orange-800 border border-orange-200'}">${a}</span>`).join('')}
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+        resultsContainer.appendChild(section);
+      });
+    }
+
+    function executeSearch() {
+      const showDiscontinued = includeDiscontinued.checked;
+      const kw = keywordFilter.value.trim().toLowerCase();
+
+      const filtered = KOIKEYA_PRODUCTS.filter(p => {
+        if (!showDiscontinued && p.discontinued) return false;
+        if (kw && !p.name.toLowerCase().includes(kw) && !p.brand.toLowerCase().includes(kw)) return false;
+        return !p.allergens.some(a => selectedAvoidAllergens.has(a));
+      });
+
+      renderResults(filtered);
+    }
+
+    async function init() {
+      createButtons(MAJOR_ALLERGENS, majorContainer);
+      createButtons(MINOR_ALLERGENS, minorContainer);
+
+      try {
+        const res = await fetch('./koikeya_allergens.json?v=' + Date.now());
+        if (!res.ok) throw new Error();
+        KOIKEYA_PRODUCTS = await res.json();
+      } catch (e) {
+        resultsContainer.innerHTML = '<div class="p-6 text-center text-red-600 bg-red-50 rounded-xl">データ読み込み準備中です。初回の自動同期が完了するまで数分お待ちください。</div>';
+        return;
+      }
+
+      executeSearch();
+      searchSubmitBtn.addEventListener("click", executeSearch);
+      includeDiscontinued.addEventListener("change", executeSearch);
+      keywordFilter.addEventListener("input", executeSearch);
+      document.getElementById("selectAllMajorBtn").addEventListener("click", () => {
+        MAJOR_ALLERGENS.forEach(a => selectedAvoidAllergens.add(a));
+        document.querySelectorAll("#majorAllergenList .allergen-btn").forEach(b => b.classList.add("selected"));
+      });
+      document.getElementById("clearAllBtn").addEventListener("click", () => {
+        selectedAvoidAllergens.clear();
+        document.querySelectorAll(".allergen-btn").forEach(b => b.classList.remove("selected"));
+        executeSearch();
+      });
+    }
+
+    init();
+  </script>
+</body>
+</html>
