@@ -1,618 +1,618 @@
 [
   {
-    "brand": "湖池屋プライドポテト",
-    "name": "神のり塩",
+    "brand": "ｸﾐﾃﾓｲｰ･ﾗ･鬣､･ﾉ･ﾝ･ﾆ･ﾈ",
+    "name": "ｿﾀ､ﾎ､�ｱ�",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "湖池屋プライドポテト",
-    "name": "ぞっこん岩塩",
+    "brand": "ｸﾐﾃﾓｲｰ･ﾗ･鬣､･ﾉ･ﾝ･ﾆ･ﾈ",
+    "name": "､ｾ､ﾃ､ｳ､莖�",
     "discontinued": false,
     "allergens": [
-      "特定原材料に準ずるもの"
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
     ]
   },
   {
-    "brand": "湖池屋プライドポテト",
-    "name": "情熱コンソメ",
+    "brand": "ｸﾐﾃﾓｲｰ･ﾗ･鬣､･ﾉ･ﾝ･ﾆ･ﾈ",
+    "name": "ｾｮ･ｳ･ｽ･�",
     "discontinued": false,
     "allergens": [
-      "特定原材料に準ずるもの"
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
     ]
   },
   {
-    "brand": "湖池屋プライドポテト",
-    "name": "ドはまり黒胡椒",
+    "brand": "ｸﾐﾃﾓｲｰ･ﾗ･鬣､･ﾉ･ﾝ･ﾆ･ﾈ",
+    "name": "･ﾉ､ﾏ､ﾞ､�ｹﾕﾜ･",
     "discontinued": false,
     "allergens": [
-      "特定原材料に準ずるもの"
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
     ]
   },
   {
-    "brand": "湖池屋プライドポテト",
-    "name": "心とろけるチーズ",
+    "brand": "ｸﾐﾃﾓｲｰ･ﾗ･鬣､･ﾉ･ﾝ･ﾆ･ﾈ",
+    "name": "ｿｴ､ﾈ､惕ｱ､�･ﾁ｡ｼ･ｺ",
     "discontinued": true,
     "allergens": [
-      "特定原材料に準ずるもの"
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
     ]
   },
   {
-    "brand": "湖池屋プライドポテト",
-    "name": "GOLD　食塩不使用　幸せの極みだし",
+    "brand": "ｸﾐﾃﾓｲｰ･ﾗ･鬣､･ﾉ･ﾝ･ﾆ･ﾈ",
+    "name": "GOLD｡｡ｿｩｱﾔｻﾈﾍﾑ｡｡ｹｬ､ｻ､ﾎｶﾋ､ﾟ､ﾀ､ｷ",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "湖池屋プライドポテト",
-    "name": "幻の芋　今金男しゃく　岩塩",
+    "brand": "ｸﾐﾃﾓｲｰ･ﾗ･鬣､･ﾉ･ﾝ･ﾆ･ﾈ",
+    "name": "ｸｸ､ﾎｰ｡ｺ｣ｶ篥ﾋ､ｷ､网ｯ｡｡ｴ莖�",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "湖池屋プライドポテト",
-    "name": "GOLD　ひとくちカット　食塩不使用 幸せの極みだし",
+    "brand": "ｸﾐﾃﾓｲｰ･ﾗ･鬣､･ﾉ･ﾝ･ﾆ･ﾈ",
+    "name": "GOLD｡｡､ﾒ､ﾈ､ｯ､ﾁ･ｫ･ﾃ･ﾈ｡｡ｿｩｱﾔｻﾈﾍﾑ ｹｬ､ｻ､ﾎｶﾋ､ﾟ､ﾀ､ｷ",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "湖池屋プライドポテト",
-    "name": "ゆず七味焼き鳥（京都）",
+    "brand": "ｸﾐﾃﾓｲｰ･ﾗ･鬣､･ﾉ･ﾝ･ﾆ･ﾈ",
+    "name": "､讀ｺｼｷﾌ｣ｾﾆ､ｭﾄｻ｡ﾊｵﾅﾔ｡ﾋ",
     "discontinued": false,
     "allergens": [
-      "特定原材料に準ずるもの"
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
     ]
   },
   {
-    "brand": "湖池屋プライドポテト",
-    "name": "こぼれうに醤油（宗像）",
+    "brand": "ｸﾐﾃﾓｲｰ･ﾗ･鬣､･ﾉ･ﾝ･ﾆ･ﾈ",
+    "name": "､ｳ､ﾜ､�､ｦ､ﾋｾﾟﾌ｡ﾊｽ｡ﾁ�｡ﾋ",
     "discontinued": false,
     "allergens": [
-      "特定原材料",
-      "特定原材料に準ずるもの"
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ",
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
     ]
   },
   {
-    "brand": "湖池屋プライドポテト",
-    "name": "あか牛にんにく醤油（熊本）",
+    "brand": "ｸﾐﾃﾓｲｰ･ﾗ･鬣､･ﾉ･ﾝ･ﾆ･ﾈ",
+    "name": "､｢､ｫｵ惕ﾋ､ﾋ､ｯｾﾟﾌ｡ﾊｷｧﾋﾜ｡ﾋ",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "湖池屋プライドポテト",
-    "name": "ほたてバター（縄文）",
+    "brand": "ｸﾐﾃﾓｲｰ･ﾗ･鬣､･ﾉ･ﾝ･ﾆ･ﾈ",
+    "name": "､ﾛ､ｿ､ﾆ･ﾐ･ｿ｡ｼ｡ﾊﾆ�ﾊｸ｡ﾋ",
     "discontinued": false,
     "allergens": [
-      "特定原材料に準ずるもの"
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
     ]
   },
   {
-    "brand": "ピュアポテト",
-    "name": "オホーツクの塩と岩塩",
+    "brand": "･ﾔ･螂｢･ﾝ･ﾆ･ﾈ",
+    "name": "･ｪ･ﾛ｡ｼ･ﾄ･ｯ､ﾎｱﾈｴ莖�",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "ピュアポテト",
-    "name": "濃いのり塩",
+    "brand": "･ﾔ･螂｢･ﾝ･ﾆ･ﾈ",
+    "name": "ﾇｻ､､､ﾎ､�ｱ�",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "ピュアポテト",
-    "name": "超コンソメ",
+    "brand": "･ﾔ･螂｢･ﾝ･ﾆ･ﾈ",
+    "name": "ﾄｶ･ｳ･ｽ･�",
     "discontinued": true,
     "allergens": [
-      "特定原材料に準ずるもの"
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
     ]
   },
   {
-    "brand": "ピュアポテト",
-    "name": "ゆず胡椒",
+    "brand": "･ﾔ･螂｢･ﾝ･ﾆ･ﾈ",
+    "name": "､讀ｺｸﾕﾜ･",
     "discontinued": true,
     "allergens": [
-      "特定原材料に準ずるもの"
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
     ]
   },
   {
-    "brand": "ピュアポテト",
-    "name": "豪快海苔しお",
-    "discontinued": true,
-    "allergens": []
-  },
-  {
-    "brand": "ピュアポテト",
-    "name": "鬼ノ宴 鬼もハマる辛さ シラチャーソース",
+    "brand": "･ﾔ･螂｢･ﾝ･ﾆ･ﾈ",
+    "name": "ｹ�ｲ､ﾂﾝ､ｷ､ｪ",
     "discontinued": true,
     "allergens": []
   },
   {
-    "brand": "ピュアポテト",
-    "name": "シラチャーソース",
+    "brand": "･ﾔ･螂｢･ﾝ･ﾆ･ﾈ",
+    "name": "ｵｴ･ﾎｱ� ｵｴ､筵ﾏ･ﾞ､�ｿﾉ､ｵ ･ｷ･鬣ﾁ･罍ｼ･ｽ｡ｼ･ｹ",
     "discontinued": true,
     "allergens": []
   },
   {
-    "brand": "ピュアポテト",
-    "name": "We ケチャップ",
-    "discontinued": false,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "ピュアポテト",
-    "name": "ビーフ&チーズ",
-    "discontinued": false,
-    "allergens": [
-      "特定原材料",
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "ピュアポテト",
-    "name": "厚切りひとくちカット　オホーツクの塩と岩塩",
-    "discontinued": false,
-    "allergens": []
-  },
-  {
-    "brand": "湖池屋ストロング",
-    "name": "海苔ざんまい",
-    "discontinued": true,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "湖池屋ストロング",
-    "name": "辛レモン",
-    "discontinued": false,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "湖池屋ストロング",
-    "name": "サワークリームオニオン（JANコード：  4514410169852）",
-    "discontinued": true,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "湖池屋ストロング",
-    "name": "サワークリームオニオン",
-    "discontinued": false,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "湖池屋ストロング",
-    "name": "豪快のり",
-    "discontinued": false,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "湖池屋ストロング",
-    "name": "デラックスピザ",
-    "discontinued": true,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "湖池屋ストロング",
-    "name": "梅ざんまい",
-    "discontinued": false,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "ポテトチップス",
-    "name": "のり塩",
-    "discontinued": false,
-    "allergens": []
-  },
-  {
-    "brand": "ポテトチップス",
-    "name": "じゃがいもと塩",
-    "discontinued": false,
-    "allergens": []
-  },
-  {
-    "brand": "ポテトチップス",
-    "name": "金のコンソメ",
-    "discontinued": false,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "ポテトチップス",
-    "name": "ガーリック",
-    "discontinued": false,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "ポテトチップス",
-    "name": "のり醤油",
-    "discontinued": false,
-    "allergens": []
-  },
-  {
-    "brand": "ポテトチップス",
-    "name": "ハニー＆バター",
-    "discontinued": false,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "ポテトチップス",
-    "name": "GARAKU　和風だしスープカレー味",
+    "brand": "･ﾔ･螂｢･ﾝ･ﾆ･ﾈ",
+    "name": "･ｷ･鬣ﾁ･罍ｼ･ｽ｡ｼ･ｹ",
     "discontinued": true,
     "allergens": []
   },
   {
-    "brand": "ポテトチップス",
-    "name": "VIVANTポテトチップス　乃木ののり塩",
-    "discontinued": false,
-    "allergens": []
-  },
-  {
-    "brand": "ポテトチップス",
-    "name": "VIVANTポテトチップス　野崎のケバブ",
+    "brand": "･ﾔ･螂｢･ﾝ･ﾆ･ﾈ",
+    "name": "We ･ｱ･ﾁ･罕ﾃ･ﾗ",
     "discontinued": false,
     "allergens": [
-      "特定原材料に準ずるもの"
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
     ]
   },
   {
-    "brand": "ポテトチップス",
-    "name": "スティックポテト　のり塩",
-    "discontinued": false,
-    "allergens": []
-  },
-  {
-    "brand": "ポテトチップス",
-    "name": "スティックポテト　じゃがいもと塩",
-    "discontinued": false,
-    "allergens": []
-  },
-  {
-    "brand": "カラムーチョ",
-    "name": "カラムーチョチップス　ホットチリ味",
+    "brand": "･ﾔ･螂｢･ﾝ･ﾆ･ﾈ",
+    "name": "･ﾓ｡ｼ･ﾕ&･ﾁ｡ｼ･ｺ",
     "discontinued": false,
     "allergens": [
-      "特定原材料に準ずるもの"
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ",
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
     ]
   },
   {
-    "brand": "カラムーチョ",
-    "name": "甘辛無限カラムーチョ ヤンニョムだれチキン",
-    "discontinued": false,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "カラムーチョ",
-    "name": "和牛カラムーチョ 冴えるわさび",
+    "brand": "･ﾔ･螂｢･ﾝ･ﾆ･ﾈ",
+    "name": "ｸ�ﾀﾚ､熙ﾒ､ﾈ､ｯ､ﾁ･ｫ･ﾃ･ﾈ｡｡･ｪ･ﾛ｡ｼ･ﾄ･ｯ､ﾎｱﾈｴ莖�",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "カラムーチョ",
-    "name": "ゴジラVSカラムーチョ　シラチャーの逆襲",
+    "brand": "ｸﾐﾃﾓｲｰ･ｹ･ﾈ･愠ｰ",
+    "name": "ｳ､ﾂﾝ､ｶ､ﾞ､､",
     "discontinued": true,
     "allergens": [
-      "特定原材料に準ずるもの"
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
     ]
   },
   {
-    "brand": "カラムーチョ",
-    "name": "スティックカラムーチョ　ホットチリ味",
+    "brand": "ｸﾐﾃﾓｲｰ･ｹ･ﾈ･愠ｰ",
+    "name": "ｿﾉ･�･筵�",
     "discontinued": false,
     "allergens": [
-      "特定原材料に準ずるもの"
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
     ]
   },
   {
-    "brand": "カラムーチョ",
-    "name": "スティックわびさびカラムーチョ 肉ウマわさび",
-    "discontinued": false,
-    "allergens": []
-  },
-  {
-    "brand": "カラムーチョ",
-    "name": "めっちゃカラムーチョ　夏のやみつきファイヤー",
+    "brand": "ｸﾐﾃﾓｲｰ･ｹ･ﾈ･愠ｰ",
+    "name": "･ｵ･�｡ｼ･ｯ･遙ｼ･爭ｪ･ﾋ･ｪ･ﾊJAN･ｳ｡ｼ･ﾉ｡ｧ  4514410169852｡ﾋ",
     "discontinued": true,
     "allergens": [
-      "特定原材料に準ずるもの"
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
     ]
   },
   {
-    "brand": "カラムーチョ",
-    "name": "完全メシ カラムーチョ 辛旨!スパイスカレー",
+    "brand": "ｸﾐﾃﾓｲｰ･ｹ･ﾈ･愠ｰ",
+    "name": "･ｵ･�｡ｼ･ｯ･遙ｼ･爭ｪ･ﾋ･ｪ･�",
     "discontinued": false,
     "allergens": [
-      "特定原材料に準ずるもの"
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
     ]
   },
   {
-    "brand": "すっぱムーチョ",
-    "name": "じゃがうまビネガー",
+    "brand": "ｸﾐﾃﾓｲｰ･ｹ･ﾈ･愠ｰ",
+    "name": "ｹ�ｲﾎ､�",
     "discontinued": false,
     "allergens": [
-      "特定原材料に準ずるもの"
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
     ]
   },
   {
-    "brand": "すっぱムーチョ",
-    "name": "さっぱり梅",
-    "discontinued": false,
-    "allergens": []
-  },
-  {
-    "brand": "すっぱムーチョ",
-    "name": "めっちゃすっぱムーチョ　夏の爽快シャワー",
-    "discontinued": true,
-    "allergens": []
-  },
-  {
-    "brand": "すっぱムーチョ",
-    "name": "キングギドラVSすっぱムーチョ　海鮮総進撃",
+    "brand": "ｸﾐﾃﾓｲｰ･ｹ･ﾈ･愠ｰ",
+    "name": "･ﾇ･鬣ﾃ･ｯ･ｹ･ﾔ･ｶ",
     "discontinued": true,
     "allergens": [
-      "特定原材料に準ずるもの"
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
     ]
   },
   {
-    "brand": "金のポテト",
-    "name": "やみつき塩",
+    "brand": "ｸﾐﾃﾓｲｰ･ｹ･ﾈ･愠ｰ",
+    "name": "ﾇﾟ､ｶ､ﾞ､､",
+    "discontinued": false,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ﾝ･ﾆ･ﾈ･ﾁ･ﾃ･ﾗ･ｹ",
+    "name": "､ﾎ､�ｱ�",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "金のポテト",
-    "name": "王道のり塩",
+    "brand": "･ﾝ･ﾆ･ﾈ･ﾁ･ﾃ･ﾗ･ｹ",
+    "name": "､ｸ､网ｬ､､､筅ﾈｱ�",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "湖池屋ファーム",
-    "name": "黄金の果肉 焼き塩",
+    "brand": "･ﾝ･ﾆ･ﾈ･ﾁ･ﾃ･ﾗ･ｹ",
+    "name": "ｶ筅ﾎ･ｳ･ｽ･�",
+    "discontinued": false,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ﾝ･ﾆ･ﾈ･ﾁ･ﾃ･ﾗ･ｹ",
+    "name": "･ｬ｡ｼ･�･ﾃ･ｯ",
+    "discontinued": false,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ﾝ･ﾆ･ﾈ･ﾁ･ﾃ･ﾗ･ｹ",
+    "name": "､ﾎ､�ｾﾟﾌ",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "･ﾝ･ﾆ･ﾈ･ﾁ･ﾃ･ﾗ･ｹ",
+    "name": "･ﾏ･ﾋ｡ｼ｡ﾐ･ｿ｡ｼ",
+    "discontinued": false,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ﾝ･ﾆ･ﾈ･ﾁ･ﾃ･ﾗ･ｹ",
+    "name": "GARAKU｡｡ﾏﾂﾉﾀ､ｷ･ｹ｡ｼ･ﾗ･ｫ･�｡ｼﾌ｣",
     "discontinued": true,
     "allergens": []
   },
   {
-    "brand": "湖池屋ファーム",
-    "name": "旨味こぼれ すじ青のり",
-    "discontinued": true,
-    "allergens": []
-  },
-  {
-    "brand": "スコーン",
-    "name": "絶品焼きとうもろこし",
-    "discontinued": false,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "スコーン",
-    "name": "やみつきバーベキュー",
-    "discontinued": false,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "スコーン",
-    "name": "とろけるクアトロチーズ",
-    "discontinued": false,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "スコーン",
-    "name": "海老のとりこ",
-    "discontinued": false,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "スコーン",
-    "name": "梅にんにく",
-    "discontinued": true,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "スコーン",
-    "name": "濃厚カルボナーラ",
-    "discontinued": true,
-    "allergens": [
-      "特定原材料",
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "ドンタコス",
-    "name": "ビーフチリタコス",
+    "brand": "･ﾝ･ﾆ･ﾈ･ﾁ･ﾃ･ﾗ･ｹ",
+    "name": "VIVANT･ﾝ･ﾆ･ﾈ･ﾁ･ﾃ･ﾗ･ｹ｡｡ﾇｵﾌﾚ､ﾎ､ﾎ､�ｱ�",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "ドンタコス",
-    "name": "チーズチリタコス",
+    "brand": "･ﾝ･ﾆ･ﾈ･ﾁ･ﾃ･ﾗ･ｹ",
+    "name": "VIVANT･ﾝ･ﾆ･ﾈ･ﾁ･ﾃ･ﾗ･ｹ｡｡ﾌ鋓熙ﾎ･ｱ･ﾐ･ﾖ",
     "discontinued": false,
     "allergens": [
-      "特定原材料に準ずるもの"
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
     ]
   },
   {
-    "brand": "ドンタコス",
-    "name": "海鮮グリルチリタコス",
-    "discontinued": true,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "ポリンキー",
-    "name": "あっさりコーン",
-    "discontinued": false,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "ポリンキー",
-    "name": "めんたいあじ",
-    "discontinued": false,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "ポリンキー",
-    "name": "カリッカリえびポリンキー　えび塩",
-    "discontinued": true,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "ポリンキー",
-    "name": "えび塩",
-    "discontinued": false,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "生・チー",
-    "name": "メルティーチーズ",
-    "discontinued": true,
-    "allergens": [
-      "特定原材料",
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "生・チー",
-    "name": "トリュフチーズ",
-    "discontinued": true,
-    "allergens": [
-      "特定原材料",
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "スリムバッグ",
-    "name": "スティックポテト　のり塩",
+    "brand": "･ﾝ･ﾆ･ﾈ･ﾁ･ﾃ･ﾗ･ｹ",
+    "name": "･ｹ･ﾆ･｣･ﾃ･ｯ･ﾝ･ﾆ･ﾈ｡｡､ﾎ､�ｱ�",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "スリムバッグ",
-    "name": "スティックポテト　金のコンソメ",
-    "discontinued": false,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "スリムバッグ",
-    "name": "スティックカラムーチョ　ホットチリ味",
-    "discontinued": false,
-    "allergens": [
-      "特定原材料に準ずるもの"
-    ]
-  },
-  {
-    "brand": "スリムバッグ",
-    "name": "スティックすっぱムーチョ さっぱり梅",
+    "brand": "･ﾝ･ﾆ･ﾈ･ﾁ･ﾃ･ﾗ･ｹ",
+    "name": "･ｹ･ﾆ･｣･ﾃ･ｯ･ﾝ･ﾆ･ﾈ｡｡､ｸ､网ｬ､､､筅ﾈｱ�",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "スリムバッグ",
-    "name": "ピュアポテト　厚切りひとくちカット　オホーツクの塩と岩塩",
+    "brand": "･ｫ･鬣爍ｼ･ﾁ･�",
+    "name": "･ｫ･鬣爍ｼ･ﾁ･逾ﾁ･ﾃ･ﾗ･ｹ｡｡･ﾛ･ﾃ･ﾈ･ﾁ･�ﾌ｣",
+    "discontinued": false,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ｫ･鬣爍ｼ･ﾁ･�",
+    "name": "ｴﾅｿﾉﾌｵｸﾂ･ｫ･鬣爍ｼ･ﾁ･� ･茹ﾋ･逾爨ﾀ､�･ﾁ･ｭ･�",
+    "discontinued": false,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ｫ･鬣爍ｼ･ﾁ･�",
+    "name": "ﾏﾂｵ愠ｫ･鬣爍ｼ･ﾁ･� ｺ网ｨ､�､�､ｵ､ﾓ",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "スリムバッグ",
-    "name": "湖池屋プライドポテト　ひとくちカット　神のり塩",
+    "brand": "･ｫ･鬣爍ｼ･ﾁ･�",
+    "name": "･ｴ･ｸ･餬S･ｫ･鬣爍ｼ･ﾁ･遑｡･ｷ･鬣ﾁ･罍ｼ､ﾎｵﾕｽｱ",
+    "discontinued": true,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ｫ･鬣爍ｼ･ﾁ･�",
+    "name": "･ｹ･ﾆ･｣･ﾃ･ｯ･ｫ･鬣爍ｼ･ﾁ･遑｡･ﾛ･ﾃ･ﾈ･ﾁ･�ﾌ｣",
+    "discontinued": false,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ｫ･鬣爍ｼ･ﾁ･�",
+    "name": "･ｹ･ﾆ･｣･ﾃ･ｯ､�､ﾓ､ｵ､ﾓ･ｫ･鬣爍ｼ･ﾁ･� ﾆｦ･ﾞ､�､ｵ､ﾓ",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "スリムバッグ",
-    "name": "湖池屋プライドポテト　ひとくちカット　ぞっこん岩塩",
-    "discontinued": false,
+    "brand": "･ｫ･鬣爍ｼ･ﾁ･�",
+    "name": "､皃ﾃ､ﾁ､罕ｫ･鬣爍ｼ･ﾁ･遑｡ｲﾆ､ﾎ､荀ﾟ､ﾄ､ｭ･ﾕ･｡･､･茖ｼ",
+    "discontinued": true,
     "allergens": [
-      "特定原材料に準ずるもの"
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
     ]
   },
   {
-    "brand": "いつでもチャック",
-    "name": "スティックカラムーチョ ホットチリ味",
+    "brand": "･ｫ･鬣爍ｼ･ﾁ･�",
+    "name": "ｴｰﾁｴ･皈ｷ ･ｫ･鬣爍ｼ･ﾁ･� ｿﾉｻﾝ!･ｹ･ﾑ･､･ｹ･ｫ･�｡ｼ",
     "discontinued": false,
     "allergens": [
-      "特定原材料に準ずるもの"
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
     ]
   },
   {
-    "brand": "いつでもチャック",
-    "name": "トルティアチップス　塩味",
+    "brand": "､ｹ､ﾃ､ﾑ･爍ｼ･ﾁ･�",
+    "name": "､ｸ､网ｬ､ｦ､ﾞ･ﾓ･ﾍ･ｬ｡ｼ",
+    "discontinued": false,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "､ｹ､ﾃ､ﾑ･爍ｼ･ﾁ･�",
+    "name": "､ｵ､ﾃ､ﾑ､�ﾇﾟ",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "､ｹ､ﾃ､ﾑ･爍ｼ･ﾁ･�",
+    "name": "､皃ﾃ､ﾁ､网ｹ､ﾃ､ﾑ･爍ｼ･ﾁ･遑｡ｲﾆ､ﾎﾁﾖｲｷ･罕�｡ｼ",
+    "discontinued": true,
+    "allergens": []
+  },
+  {
+    "brand": "､ｹ､ﾃ､ﾑ･爍ｼ･ﾁ･�",
+    "name": "･ｭ･ｰ･ｮ･ﾉ･餬S､ｹ､ﾃ､ﾑ･爍ｼ･ﾁ･遑｡ｳ､ﾁｯﾁ暠ﾊｷ�",
+    "discontinued": true,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "ｶ筅ﾎ･ﾝ･ﾆ･ﾈ",
+    "name": "､荀ﾟ､ﾄ､ｭｱ�",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "ｶ筅ﾎ･ﾝ･ﾆ･ﾈ",
+    "name": "ｲｦﾆｻ､ﾎ､�ｱ�",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "ｸﾐﾃﾓｲｰ･ﾕ･｡｡ｼ･�",
+    "name": "ｲｫｶ筅ﾎｲﾌﾆ� ｾﾆ､ｭｱ�",
+    "discontinued": true,
+    "allergens": []
+  },
+  {
+    "brand": "ｸﾐﾃﾓｲｰ･ﾕ･｡｡ｼ･�",
+    "name": "ｻﾝﾌ｣､ｳ､ﾜ､� ､ｹ､ｸﾀﾄ､ﾎ､�",
+    "discontinued": true,
+    "allergens": []
+  },
+  {
+    "brand": "･ｹ･ｳ｡ｼ･�",
+    "name": "ﾀ菲ﾊｾﾆ､ｭ､ﾈ､ｦ､筅惕ｳ､ｷ",
+    "discontinued": false,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ｹ･ｳ｡ｼ･�",
+    "name": "､荀ﾟ､ﾄ､ｭ･ﾐ｡ｼ･ﾙ･ｭ･蝪ｼ",
+    "discontinued": false,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ｹ･ｳ｡ｼ･�",
+    "name": "､ﾈ､惕ｱ､�･ｯ･｢･ﾈ･愠ﾁ｡ｼ･ｺ",
+    "discontinued": false,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ｹ･ｳ｡ｼ･�",
+    "name": "ｳ､ﾏｷ､ﾎ､ﾈ､熙ｳ",
+    "discontinued": false,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ｹ･ｳ｡ｼ･�",
+    "name": "ﾇﾟ､ﾋ､ﾋ､ｯ",
+    "discontinued": true,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ｹ･ｳ｡ｼ･�",
+    "name": "ﾇｻｸ�･ｫ･�･ﾜ･ﾊ｡ｼ･�",
+    "discontinued": true,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ",
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ﾉ･ｿ･ｳ･ｹ",
+    "name": "･ﾓ｡ｼ･ﾕ･ﾁ･�･ｿ･ｳ･ｹ",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "･ﾉ･ｿ･ｳ･ｹ",
+    "name": "･ﾁ｡ｼ･ｺ･ﾁ･�･ｿ･ｳ･ｹ",
+    "discontinued": false,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ﾉ･ｿ･ｳ･ｹ",
+    "name": "ｳ､ﾁｯ･ｰ･�･�･ﾁ･�･ｿ･ｳ･ｹ",
+    "discontinued": true,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ﾝ･�･ｭ｡ｼ",
+    "name": "､｢､ﾃ､ｵ､�･ｳ｡ｼ･�",
+    "discontinued": false,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ﾝ･�･ｭ｡ｼ",
+    "name": "､皃ｿ､､､｢､ｸ",
+    "discontinued": false,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ﾝ･�･ｭ｡ｼ",
+    "name": "･ｫ･�･ﾃ･ｫ･熙ｨ､ﾓ･ﾝ･�･ｭ｡ｼ｡｡､ｨ､ﾓｱ�",
+    "discontinued": true,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ﾝ･�･ｭ｡ｼ",
+    "name": "､ｨ､ﾓｱ�",
+    "discontinued": false,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "ﾀｸ｡ｦ･ﾁ｡ｼ",
+    "name": "･皈�･ﾆ･｣｡ｼ･ﾁ｡ｼ･ｺ",
+    "discontinued": true,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ",
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "ﾀｸ｡ｦ･ﾁ｡ｼ",
+    "name": "･ﾈ･�･螂ﾕ･ﾁ｡ｼ･ｺ",
+    "discontinued": true,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ",
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ｹ･�･爭ﾐ･ﾃ･ｰ",
+    "name": "･ｹ･ﾆ･｣･ﾃ･ｯ･ﾝ･ﾆ･ﾈ｡｡､ﾎ､�ｱ�",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "･ｹ･�･爭ﾐ･ﾃ･ｰ",
+    "name": "･ｹ･ﾆ･｣･ﾃ･ｯ･ﾝ･ﾆ･ﾈ｡｡ｶ筅ﾎ･ｳ･ｽ･�",
+    "discontinued": false,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ｹ･�･爭ﾐ･ﾃ･ｰ",
+    "name": "･ｹ･ﾆ･｣･ﾃ･ｯ･ｫ･鬣爍ｼ･ﾁ･遑｡･ﾛ･ﾃ･ﾈ･ﾁ･�ﾌ｣",
+    "discontinued": false,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "･ｹ･�･爭ﾐ･ﾃ･ｰ",
+    "name": "･ｹ･ﾆ･｣･ﾃ･ｯ､ｹ､ﾃ､ﾑ･爍ｼ･ﾁ･� ､ｵ､ﾃ､ﾑ､�ﾇﾟ",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "･ｹ･�･爭ﾐ･ﾃ･ｰ",
+    "name": "･ﾔ･螂｢･ﾝ･ﾆ･ﾈ｡｡ｸ�ﾀﾚ､熙ﾒ､ﾈ､ｯ､ﾁ･ｫ･ﾃ･ﾈ｡｡･ｪ･ﾛ｡ｼ･ﾄ･ｯ､ﾎｱﾈｴ莖�",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "･ｹ･�･爭ﾐ･ﾃ･ｰ",
+    "name": "ｸﾐﾃﾓｲｰ･ﾗ･鬣､･ﾉ･ﾝ･ﾆ･ﾈ｡｡､ﾒ､ﾈ､ｯ､ﾁ･ｫ･ﾃ･ﾈ｡｡ｿﾀ､ﾎ､�ｱ�",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "･ｹ･�･爭ﾐ･ﾃ･ｰ",
+    "name": "ｸﾐﾃﾓｲｰ･ﾗ･鬣､･ﾉ･ﾝ･ﾆ･ﾈ｡｡､ﾒ､ﾈ､ｯ､ﾁ･ｫ･ﾃ･ﾈ｡｡､ｾ､ﾃ､ｳ､莖�",
+    "discontinued": false,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "､､､ﾄ､ﾇ､筵ﾁ･罕ﾃ･ｯ",
+    "name": "･ｹ･ﾆ･｣･ﾃ･ｯ･ｫ･鬣爍ｼ･ﾁ･� ･ﾛ･ﾃ･ﾈ･ﾁ･�ﾌ｣",
+    "discontinued": false,
+    "allergens": [
+      "ﾆﾃﾄ�ｸｶｺ猥ﾁ､ﾋｽ爨ｺ､�､筅ﾎ"
+    ]
+  },
+  {
+    "brand": "､､､ﾄ､ﾇ､筵ﾁ･罕ﾃ･ｯ",
+    "name": "･ﾈ･�･ﾆ･｣･｢･ﾁ･ﾃ･ﾗ･ｹ｡｡ｱ｣",
     "discontinued": false,
     "allergens": []
   },
   {
     "brand": "PinkyFRESH",
-    "name": "【通販限定】　クリーンミント味 90粒",
+    "name": "｡ﾚﾄﾌﾈﾎｸﾂﾄ遙ﾛ｡｡･ｯ･遙ｼ･ﾟ･ﾈﾌ｣ 90ﾎｳ",
     "discontinued": false,
     "allergens": []
   },
   {
     "brand": "PinkyFRESH",
-    "name": "【通販限定】　クリーンミント味 60粒",
+    "name": "｡ﾚﾄﾌﾈﾎｸﾂﾄ遙ﾛ｡｡･ｯ･遙ｼ･ﾟ･ﾈﾌ｣ 60ﾎｳ",
     "discontinued": false,
     "allergens": []
   },
   {
     "brand": "PinkyFRESH",
-    "name": "【通販限定】　ヨーグルト味 60粒",
+    "name": "｡ﾚﾄﾌﾈﾎｸﾂﾄ遙ﾛ｡｡･陦ｼ･ｰ･�･ﾈﾌ｣ 60ﾎｳ",
     "discontinued": false,
     "allergens": []
   },
   {
     "brand": "PinkyFRESH",
-    "name": "【通販限定】　グレープ味 60粒",
+    "name": "｡ﾚﾄﾌﾈﾎｸﾂﾄ遙ﾛ｡｡･ｰ･�｡ｼ･ﾗﾌ｣ 60ﾎｳ",
     "discontinued": false,
     "allergens": []
   },
   {
     "brand": "PinkyFRESH",
-    "name": "【通販限定】　クリーンミント味 分包",
+    "name": "｡ﾚﾄﾌﾈﾎｸﾂﾄ遙ﾛ｡｡･ｯ･遙ｼ･ﾟ･ﾈﾌ｣ ﾊｬﾊ�",
     "discontinued": false,
     "allergens": []
   },
   {
-    "brand": "乳酸菌LS1",
-    "name": "【通販限定】POWDER ヒアルロン酸＋",
+    "brand": "ﾆｻﾀｶﾝLS1",
+    "name": "｡ﾚﾄﾌﾈﾎｸﾂﾄ遙ﾛPOWDER ･ﾒ･｢･�･愠ﾀ｡ﾜ",
     "discontinued": false,
     "allergens": []
   }
