@@ -6,76 +6,132 @@
   <title>湖池屋 アレルギー情報検索</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    .allergen-btn {
+      transition: all 0.15s ease-in-out;
+      user-select: none;
+    }
     .allergen-btn.selected {
       background-color: #dc2626;
       color: #ffffff;
       border-color: #dc2626;
+      box-shadow: 0 2px 4px rgba(220, 38, 38, 0.25);
     }
-    .allergen-btn.selected::after { content: " ✕"; font-weight: bold; }
-    .brand-header-yellow { background-color: #fff3a8; border-left: 6px solid #eab308; }
+    .allergen-btn.selected::after {
+      content: " ✕";
+      font-weight: bold;
+    }
+    .brand-header-yellow {
+      background-color: #fff3a8;
+      border-left: 6px solid #eab308;
+    }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 min-h-screen">
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen">
+
   <div class="max-w-5xl mx-auto px-4 py-8">
+    
+    <!-- ヘッダー -->
     <header class="text-center mb-8">
-      <h1 class="text-3xl font-extrabold text-slate-900 flex items-center justify-center gap-2">
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 flex items-center justify-center gap-2">
         <span class="text-red-600">🥔</span> 湖池屋 商品アレルギー情報検索
       </h1>
-      <p class="text-sm text-slate-500 mt-2">毎週自動更新される公式データに基づき、選択した物質を<strong>含まない安心な商品</strong>を表示します。</p>
+      <p class="text-sm text-slate-500 mt-2">
+        公式サイト「アレルギー情報一覧表」の最新データに基づき、選択した物質を<strong>含まない安心な商品</strong>を検索できます。
+      </p>
     </header>
 
-    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-8">
+    <!-- アレルゲン選択パネル（森永製菓スタイル） -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 sm:p-7 mb-8">
+      
       <div class="border-b border-slate-200 pb-4 mb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
-          <h2 class="text-lg font-bold text-red-600">🛡️ 避けたいアレルギー物質を選択してください（複数選択可）</h2>
-          <p class="text-xs text-slate-500 mt-1">選んだ物質が<strong>含まれていない</strong>商品のみを抽出します。</p>
+          <h2 class="text-lg sm:text-xl font-bold text-red-600 flex items-center gap-2">
+            <span>🛡️</span> 避けたいアレルギー物質を選択してください（複数選択可）
+          </h2>
+          <p class="text-xs text-slate-500 mt-1">選択された物質が<strong>「含まれていない」</strong>商品のみを表示します。</p>
         </div>
-        <div class="flex gap-2 text-xs">
-          <button id="selectAllMajorBtn" class="px-3 py-1.5 rounded-lg border border-slate-300 hover:bg-slate-100">特定8品目を全選択</button>
-          <button id="clearAllBtn" class="px-3 py-1.5 rounded-lg border border-slate-300 hover:bg-slate-100">全解除</button>
+        <div class="flex items-center gap-2 text-xs">
+          <button id="selectAllMajorBtn" class="px-3 py-1.5 rounded-lg border border-slate-300 hover:bg-slate-100 text-slate-600 font-semibold">
+            特定8品目を全選択
+          </button>
+          <button id="clearAllBtn" class="px-3 py-1.5 rounded-lg border border-slate-300 hover:bg-slate-100 text-slate-600 font-semibold">
+            全解除
+          </button>
         </div>
       </div>
 
+      <!-- 1. 特定原材料（8品目） -->
       <div class="mb-5">
-        <span class="text-xs font-bold text-red-700 bg-red-100 px-2 py-0.5 rounded">義務表示</span>
-        <div id="majorAllergenList" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2 mt-2"></div>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-xs font-bold text-red-700 bg-red-100 px-2 py-0.5 rounded">義務表示</span>
+          <h3 class="text-sm font-bold text-slate-700">特定原材料（8品目）</h3>
+        </div>
+        <div id="majorAllergenList" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2"></div>
       </div>
 
+      <!-- 2. 特定原材料に準ずるもの（20品目＋魚介類） -->
       <div class="mb-6">
-        <span class="text-xs font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">推奨表示</span>
-        <div id="minorAllergenList" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2 mt-2"></div>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-xs font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">推奨表示</span>
+          <h3 class="text-sm font-bold text-slate-700">特定原材料に準ずるもの（20品目）＋その他</h3>
+        </div>
+        <div id="minorAllergenList" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2"></div>
       </div>
 
+      <!-- 検索ボタン -->
       <div class="pt-4 border-t border-slate-100 flex flex-col items-center">
-        <button id="searchSubmitBtn" class="w-full sm:w-80 bg-red-600 hover:bg-red-700 text-white font-bold text-base py-3.5 px-6 rounded-xl shadow-md transition">
-          🔍 この条件で検索する
+        <button 
+          id="searchSubmitBtn" 
+          class="w-full sm:w-80 bg-red-600 hover:bg-red-700 active:scale-95 text-white font-bold text-base py-3.5 px-6 rounded-xl shadow-md transition duration-150 flex items-center justify-center gap-2">
+          <span>🔍</span> この条件で検索する
         </button>
-        <span id="selectedSummary" class="text-xs text-slate-500 mt-2">全商品を表示中</span>
+        <span id="selectedSummary" class="text-xs text-slate-500 mt-2 font-medium">現在、避けたい物質は選択されていません（全商品を表示）</span>
       </div>
+
     </div>
 
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+    <!-- 検索バー ＆ 結果サマリー -->
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 px-1">
       <div class="flex items-center gap-2">
-        <h2 class="text-xl font-bold">検索結果</h2>
+        <h2 class="text-xl font-bold text-slate-800">検索結果</h2>
         <span id="resultCountBadge" class="bg-red-100 text-red-700 font-bold text-sm px-3 py-0.5 rounded-full">0 件</span>
       </div>
-      <div class="flex items-center gap-4 text-xs font-medium text-slate-600">
+
+      <div class="flex flex-wrap items-center gap-4 text-xs font-medium text-slate-600">
         <label class="flex items-center gap-1.5 cursor-pointer">
-          <input type="checkbox" id="includeDiscontinued" checked class="rounded text-red-600">
+          <input type="checkbox" id="includeDiscontinued" checked class="rounded text-red-600 focus:ring-red-500">
           <span>終売品（賞味期限内）を含む</span>
         </label>
-        <input type="text" id="keywordFilter" placeholder="商品名で絞込..." class="border border-slate-300 rounded-lg px-2.5 py-1 text-xs w-44">
+        <input 
+          type="text" 
+          id="keywordFilter" 
+          placeholder="商品名・ブランドで絞込..." 
+          class="border border-slate-300 rounded-lg px-3 py-1.5 text-xs focus:outline-none focus:ring-1 focus:ring-red-500 w-48"
+        />
       </div>
     </div>
 
+    <!-- 結果カードリスト -->
     <div id="resultsContainer" class="space-y-6">
       <div class="text-center py-12 text-slate-400">データを読み込み中...</div>
     </div>
+
+    <footer class="mt-12 bg-amber-50 border border-amber-200 rounded-xl p-5 text-xs text-amber-900 leading-relaxed">
+      <strong>⚠️ ご注意:</strong> 
+      原材料の切り替えによりアレルギー情報が更新される場合があります。お召し上がりの際は、必ず現物パッケージ裏面の原材料・アレルギー表示をご確認ください。
+    </footer>
+
   </div>
 
   <script>
-    const MAJOR_ALLERGENS = ["卵", "乳", "小麦", "えび", "かに", "くるみ", "そば", "落花生"];
-    const MINOR_ALLERGENS = ["アーモンド","あわび","いか","いくら","オレンジ","カシューナッツ","キウイフルーツ","牛肉","ごま","さけ","さば","大豆","鶏肉","バナナ","豚肉","マカダミアナッツ","まつたけ","もも","やまいも","りんご","ゼラチン","魚介類"];
+    const MAJOR_ALLERGENS = ["卵", "乳", "小麦", "そば", "落花生", "えび", "かに", "くるみ"];
+    const MINOR_ALLERGENS = [
+      "アーモンド", "あわび", "いか", "いくら", "オレンジ", "カシューナッツ", 
+      "キウイ", "牛肉", "ごま", "さけ", "さば", "大豆", "鶏肉", 
+      "バナナ", "豚肉", "まつたけ", "もも", "やまいも", "りんご", 
+      "ゼラチン", "魚介類"
+    ];
+
     const selectedAvoidAllergens = new Set();
     let KOIKEYA_PRODUCTS = [];
 
@@ -84,14 +140,16 @@
     const searchSubmitBtn = document.getElementById("searchSubmitBtn");
     const resultsContainer = document.getElementById("resultsContainer");
     const resultCountBadge = document.getElementById("resultCountBadge");
+    const selectedSummary = document.getElementById("selectedSummary");
     const includeDiscontinued = document.getElementById("includeDiscontinued");
     const keywordFilter = document.getElementById("keywordFilter");
 
+    // アレルゲンボタン生成
     function createButtons(list, container) {
       list.forEach(name => {
         const btn = document.createElement("button");
         btn.type = "button";
-        btn.className = "allergen-btn py-2 px-2.5 rounded-lg border border-slate-300 text-xs sm:text-sm font-semibold bg-white";
+        btn.className = "allergen-btn py-2 px-2.5 rounded-lg border border-slate-300 text-xs sm:text-sm font-semibold text-slate-700 bg-white hover:border-red-400";
         btn.textContent = name;
         btn.dataset.allergen = name;
         btn.addEventListener("click", () => {
@@ -102,20 +160,74 @@
             selectedAvoidAllergens.add(name);
             btn.classList.add("selected");
           }
+          updateSummary();
         });
         container.appendChild(btn);
       });
     }
 
+    function updateSummary() {
+      if (selectedAvoidAllergens.size === 0) {
+        selectedSummary.textContent = "現在、避けたい物質は選択されていません（全商品を表示）";
+        selectedSummary.className = "text-xs text-slate-500 mt-2 font-medium";
+      } else {
+        const listStr = Array.from(selectedAvoidAllergens).join("・");
+        selectedSummary.textContent = `🚫 除外指定中 (${selectedAvoidAllergens.size}品目): ${listStr}`;
+        selectedSummary.className = "text-xs text-red-600 mt-2 font-bold";
+      }
+    }
+
+    // 表記揺れ（例: "乳" と "乳成分"、"キウイ" と "キウイフルーツ"）に対応する照合関数
+    function allergenMatches(allergenInProduct, avoidedAllergen) {
+      return allergenInProduct.includes(avoidedAllergen) || avoidedAllergen.includes(allergenInProduct);
+    }
+
+    // 検索・フィルタリング実行
+    function executeSearch() {
+      const showDiscontinued = includeDiscontinued.checked;
+      const kw = keywordFilter.value.trim().toLowerCase();
+
+      const filtered = KOIKEYA_PRODUCTS.filter(prod => {
+        // 終売品フィルタ
+        if (!showDiscontinued && prod.discontinued) return false;
+
+        // キーワード検索（商品名 or ブランド名）
+        if (kw) {
+          const matchName = prod.name.toLowerCase().includes(kw);
+          const matchBrand = prod.brand.toLowerCase().includes(kw);
+          if (!matchName && !matchBrand) return false;
+        }
+
+        // 避けたいアレルゲンが含まれているかチェック
+        const containsAvoided = prod.allergens.some(a => {
+          for (let avoid of selectedAvoidAllergens) {
+            if (allergenMatches(a, avoid)) return true;
+          }
+          return false;
+        });
+
+        return !containsAvoided;
+      });
+
+      renderResults(filtered);
+    }
+
+    // 検索結果を描画（各商品にアレルゲンを明示）
     function renderResults(items) {
       resultCountBadge.textContent = `${items.length} 件`;
       resultsContainer.innerHTML = "";
 
       if (items.length === 0) {
-        resultsContainer.innerHTML = `<div class="bg-white rounded-xl p-8 text-center text-slate-500 border border-slate-200">該当する商品が見つかりませんでした。</div>`;
+        resultsContainer.innerHTML = `
+          <div class="bg-white rounded-xl p-10 text-center text-slate-500 border border-slate-200">
+            <span class="text-3xl block mb-2">🔍</span>
+            <p class="font-bold text-base">条件に該当する商品が見つかりませんでした。</p>
+            <p class="text-xs text-slate-400 mt-1">除外条件を緩めるか、検索キーワードを変更してお試しください。</p>
+          </div>`;
         return;
       }
 
+      // ブランドごとにグループ化
       const grouped = {};
       items.forEach(p => {
         if (!grouped[p.brand]) grouped[p.brand] = [];
@@ -125,41 +237,67 @@
       Object.keys(grouped).forEach(brand => {
         const section = document.createElement("div");
         section.className = "bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden";
+
+        // ブランド見出し（黄色バー）
         section.innerHTML = `
-          <div class="brand-header-yellow px-4 py-2.5 font-bold text-amber-950 flex justify-between">
+          <div class="brand-header-yellow px-4 py-3 font-extrabold text-amber-950 flex justify-between items-center">
             <span>${brand}</span>
-            <span class="text-xs bg-amber-200/80 px-2 py-0.5 rounded-full">${grouped[brand].length} アイテム</span>
-          </div>
-          <div class="divide-y divide-slate-100">
-            ${grouped[brand].map(p => `
-              <div class="p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-slate-50">
-                <div class="flex items-center gap-2">
-                  <span class="font-bold text-slate-800">${p.name}</span>${p.discontinued ? '<span class="text-[11px] bg-amber-100 text-amber-800 border border-amber-300 px-1.5 py-0.5 rounded">終売</span>' : ''}
-                </div>
-                <div class="flex items-center gap-1 flex-wrap">
-                  ${p.allergens.length === 0 ? '<span class="text-xs text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-bold">アレルゲンなし</span>' : p.allergens.map(a => `<span class="text-xs font-bold px-2 py-0.5 rounded ${MAJOR_ALLERGENS.includes(a) ? 'bg-red-50 text-red-700 border border-red-200' : 'bg-orange-50 text-orange-800 border border-orange-200'}">${a}</span>`).join('')}
-                </div>
-              </div>
-            `).join('')}
+            <span class="text-xs bg-amber-200/80 text-amber-900 font-bold px-2.5 py-0.5 rounded-full">${grouped[brand].length} 品</span>
           </div>
         `;
+
+        const listDiv = document.createElement("div");
+        listDiv.className = "divide-y divide-slate-100";
+
+        grouped[brand].forEach(p => {
+          const row = document.createElement("div");
+          row.className = "p-4 flex flex-col md:flex-row md:items-center justify-between gap-3 hover:bg-slate-50 transition-colors";
+
+          // 商品名 ＋ 終売マーク
+          let nameHtml = `
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="font-bold text-slate-900 text-base">${p.name}</span>
+              ${p.discontinued ? '<span class="text-[11px] font-bold bg-amber-100 text-amber-800 border border-amber-300 px-2 py-0.5 rounded-md">⚠️ 終売（賞味期限内）</span>' : ''}
+            </div>
+          `;
+
+          // 含まれるアレルゲンの明示
+          let allergenHtml = "";
+          if (!p.allergens || p.allergens.length === 0) {
+            allergenHtml = `
+              <div class="flex-shrink-0">
+                <span class="inline-flex items-center gap-1 text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
+                  <span>✓</span> アレルゲンなし（28品目・魚介類不使用）
+                </span>
+              </div>
+            `;
+          } else {
+            const badges = p.allergens.map(a => {
+              const isMajor = MAJOR_ALLERGENS.some(m => allergenMatches(a, m));
+              const colorClass = isMajor 
+                ? "bg-red-50 text-red-700 border-red-300" 
+                : "bg-amber-50 text-amber-800 border-amber-300";
+              return `<span class="inline-block text-xs font-bold border ${colorClass} px-2 py-0.5 rounded-md">${a}</span>`;
+            }).join(" ");
+
+            allergenHtml = `
+              <div class="flex flex-col sm:flex-row sm:items-center gap-1.5 flex-wrap">
+                <span class="text-xs font-bold text-slate-500">含まれるアレルゲン (${p.allergens.length}):</span>
+                <div class="flex flex-wrap gap-1">${badges}</div>
+              </div>
+            `;
+          }
+
+          row.innerHTML = nameHtml + allergenHtml;
+          listDiv.appendChild(row);
+        });
+
+        section.appendChild(listDiv);
         resultsContainer.appendChild(section);
       });
     }
 
-    function executeSearch() {
-      const showDiscontinued = includeDiscontinued.checked;
-      const kw = keywordFilter.value.trim().toLowerCase();
-
-      const filtered = KOIKEYA_PRODUCTS.filter(p => {
-        if (!showDiscontinued && p.discontinued) return false;
-        if (kw && !p.name.toLowerCase().includes(kw) && !p.brand.toLowerCase().includes(kw)) return false;
-        return !p.allergens.some(a => selectedAvoidAllergens.has(a));
-      });
-
-      renderResults(filtered);
-    }
-
+    // 初期化とデータ読み込み
     async function init() {
       createButtons(MAJOR_ALLERGENS, majorContainer);
       createButtons(MINOR_ALLERGENS, minorContainer);
@@ -169,21 +307,29 @@
         if (!res.ok) throw new Error();
         KOIKEYA_PRODUCTS = await res.json();
       } catch (e) {
-        resultsContainer.innerHTML = '<div class="p-6 text-center text-red-600 bg-red-50 rounded-xl">データ読み込み準備中です。初回の自動同期が完了するまで数分お待ちください。</div>';
+        resultsContainer.innerHTML = '<div class="p-6 text-center text-red-600 bg-red-50 rounded-xl">データを読み込めませんでした。Actionsの同期が完了していることを確認してください。</div>';
         return;
       }
 
       executeSearch();
-      searchSubmitBtn.addEventListener("click", executeSearch);
+
+      searchSubmitBtn.addEventListener("click", () => {
+        executeSearch();
+        resultsContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
       includeDiscontinued.addEventListener("change", executeSearch);
       keywordFilter.addEventListener("input", executeSearch);
+
       document.getElementById("selectAllMajorBtn").addEventListener("click", () => {
         MAJOR_ALLERGENS.forEach(a => selectedAvoidAllergens.add(a));
         document.querySelectorAll("#majorAllergenList .allergen-btn").forEach(b => b.classList.add("selected"));
+        updateSummary();
       });
+
       document.getElementById("clearAllBtn").addEventListener("click", () => {
         selectedAvoidAllergens.clear();
         document.querySelectorAll(".allergen-btn").forEach(b => b.classList.remove("selected"));
+        updateSummary();
         executeSearch();
       });
     }
