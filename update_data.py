@@ -6,6 +6,14 @@ from bs4 import BeautifulSoup
 URL = "https://koikeya.co.jp/allergie/list.html"
 OUTPUT_FILE = "koikeya_allergens.json"
 
+# Authoritative allergen sequence used across Koikeya's official table
+STANDARD_ALLERGENS = [
+    "卵", "乳", "小麦", "そば", "落花生", "えび", "かに", "くるみ",
+    "アーモンド", "あわび", "いか", "いくら", "オレンジ", "カシューナッツ", "キウイ",
+    "牛肉", "ごま", "さけ", "さば", "大豆", "鶏肉", "豚肉", "バナナ", "まつたけ",
+    "もも", "やまいも", "りんご", "ゼラチン", "魚介類"
+]
+
 req = urllib.request.Request(
     URL,
     headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
@@ -25,93 +33,66 @@ if not table:
 
 rows = table.find_all("tr")
 
-# --- 1. Map the true allergen headers accurately ---
-headers = []
-header_row_index = 0
-
-for i, row in enumerate(rows[:10]):
+# --- Step 1: Dynamically extract allergen headers without '商品名' ---
+allergen_headers = []
+for row in rows[:10]:
     cell_texts = [c.get_text(strip=True).replace("\n", "").replace("\r", "") for c in row.find_all(["th", "td"])]
-    # Look for the row that actually contains the allergen names
     if "卵" in cell_texts and "小麦" in cell_texts:
-        header_row_index = i
-        # Expand any colspans just in case, though subheaders rarely have them
-        for cell in row.find_all(["th", "td"]):
-            txt = cell.get_text(strip=True).replace("\n", "").replace("\r", "").strip()
-            colspan = int(cell.get("colspan", 1))
-            for _ in range(colspan):
-                headers.append(txt)
+        for c in row.find_all(["th", "td"]):
+            txt = c.get_text(strip=True).replace("\n", "").replace("\r", "").strip()
+            # Exclude header labels
+            if txt and txt not in ["商品名", "特定原材料", "特定原材料に準ずるもの", "アレルギー情報一覧表"]:
+                allergen_headers.append(txt)
         break
 
-# The header row we extracted might be missing the "商品名" (Product Name) at index 0 
-# because it was merged (rowspan) from the row above it.
-if headers and headers[0] == "卵":
-    headers.insert(0, "商品名")
+# Fallback to standard 29-allergen list if dynamic extraction fails
+if len(allergen_headers) < 20:
+    allergen_headers = STANDARD_ALLERGENS
 
-print("Mapped Header Indices:")
-for idx, h in enumerate(headers):
-    print(f"  Col {idx}: {h}")
+print(f"Loaded {len(allergen_headers)} allergen columns:")
+print(" ->", ", ".join(allergen_headers[:8]), "...")
 
 products = []
 current_brand = "その他"
 
-# --- 2. Process product rows with strict index alignment ---
-for row in rows[header_row_index + 1:]:
+# --- Step 2: Strict 1-to-1 Cell-to-Allergen Alignment ---
+for row in rows:
     cells = row.find_all(["td", "th"])
     if not cells:
         continue
 
-    # Identify brand section headers (yellow rows)
-    # They usually have 1 cell with a large colspan, or just a single th element
+    # Skip top banner/table header rows
+    first_text = cells[0].get_text(strip=True)
+    if any(h in first_text for h in ["アレルギー情報一覧表", "商品名", "特定原材料", "特定原材料に準ずるもの"]):
+        continue
+
+    # Brand header row (yellow section divider)
     if len(cells) == 1 or (cells[0].has_attr("colspan") and int(cells[0].get("colspan", 1)) > 5):
-        brand_text = cells[0].get_text(strip=True)
-        if brand_text and "商品名" not in brand_text:
-            current_brand = brand_text
+        if first_text:
+            current_brand = first_text
         continue
 
-    # The first cell of a product row is the product name
-    name_cell = cells[0]
-    flavor_name = name_cell.get_text(strip=True).replace('\u3000', ' ')
-    
-    # Skip if it's a repeated header row
-    if not flavor_name or flavor_name == "商品名" or "特定原材料" in flavor_name:
+    # Product Flavor Name
+    flavor_name = first_text.replace('\u3000', ' ')
+    if not flavor_name:
         continue
 
-    is_discontinued = bool(name_cell.find("img", src=re.compile(r"allergie_icon01\.gif")))
+    # Discontinued icon (allergie_icon01.gif)
+    is_discontinued = bool(cells[0].find("img", src=re.compile(r"allergie_icon01\.gif")))
 
-    allergens = []
-    
-    # In product rows, index 0 is always the product name.
-    # Therefore, the data cells start at index 1.
-    # We loop through the remaining cells and map them to headers[1], headers[2], etc.
-    data_cells = cells[1:]
-    
-    # We must track the logical column index to account for any data colspans
-    logical_col_idx = 1 
-    
-    for cell in data_cells:
-        colspan = int(cell.get("colspan", 1))
-        
-        if logical_col_idx < len(headers):
-            has_img_mark = bool(cell.find("img", src=re.compile(r"allergie_mark\.gif")))
-            text_val = cell.get_text(strip=True)
-            has_text_mark = any(m in text_val for m in ["●", "〇", "○", "1", "含む"])
+    # The allergen checkboxes start strictly at cells[1]
+    allergen_cells = cells[1:]
+    matched_allergens = []
 
-            if has_img_mark or has_text_mark:
-                allergen_name = headers[logical_col_idx]
-                if allergen_name and allergen_name not in ["商品名", "ブランド"]:
-                    allergens.append(allergen_name)
-                    
-        logical_col_idx += colspan
+    # Direct 1-to-1 index pairing:
+    # allergen_cells[0] corresponds to allergen_headers[0] ('卵')
+    # allergen_cells[1] corresponds to allergen_headers[1] ('乳')
+    # allergen_cells[2] corresponds to allergen_headers[2] ('小麦')
+    # allergen_cells[19] corresponds to allergen_headers[19] ('大豆')
+    for idx, cell in enumerate(allergen_cells):
+        if idx >= len(allergen_headers):
+            break
 
-    products.append({
-        "brand": current_brand,
-        "name": flavor_name,
-        "discontinued": is_discontinued,
-        "allergens": list(dict.fromkeys(allergens)) # remove duplicates, preserve order
-    })
-
-# Save output
-with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-    json.dump(products, f,ensure_ascii=False, indent=2)
-
-print(f"Successfully processed {len(products)} products.")
+        has_img = bool(cell.find("img", src=re.compile(r"allergie_mark\.gif")))
+        text_mark = cell.get_text(strip=True)
+        has_symbol = any(s in text_mark for s in ["●", "〇", "○", "1", "含む"])
