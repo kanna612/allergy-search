@@ -1,0 +1,686 @@
+[
+  {
+    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
+    "name": "���Τ��",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
+    "name": "���ä�����",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
+    "name": "��Ǯ���󥽥�",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
+    "name": "�ɤϤޤ����ܥ",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
+    "name": "���Ȥ����������",
+    "discontinued": true,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
+    "name": "GOLD�������Ի��ѡ������ζˤߤ���",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
+    "name": "���ΰ򡡺����ˤ��㤯�����",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
+    "name": "GOLD���ҤȤ������åȡ������Ի��� �����ζˤߤ���",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
+    "name": "�椺��̣�Ƥ�Ļ�ʵ��ԡ�",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
+    "name": "���ܤ줦�˾����ʽ�����",
+    "discontinued": false,
+    "allergens": [
+      "����̾",
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
+    "name": "�������ˤ�ˤ������ʷ��ܡ�",
+    "discontinued": false,
+    "allergens": [
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "���Ӳ��ץ饤�ɥݥƥ�",
+    "name": "�ۤ��ƥХ�������ʸ��",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�ԥ奢�ݥƥ�",
+    "name": "���ۡ��ĥ��α��ȴ��",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "�ԥ奢�ݥƥ�",
+    "name": "ǻ���Τ��",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "�ԥ奢�ݥƥ�",
+    "name": "Ķ���󥽥�",
+    "discontinued": true,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�ԥ奢�ݥƥ�",
+    "name": "�椺��ܥ",
+    "discontinued": true,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�ԥ奢�ݥƥ�",
+    "name": "������ݤ���",
+    "discontinued": true,
+    "allergens": []
+  },
+  {
+    "brand": "�ԥ奢�ݥƥ�",
+    "name": "���α� ����ϥޤ�ɤ� ������㡼������",
+    "discontinued": true,
+    "allergens": [
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�ԥ奢�ݥƥ�",
+    "name": "������㡼������",
+    "discontinued": true,
+    "allergens": [
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�ԥ奢�ݥƥ�",
+    "name": "We ������å�",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�ԥ奢�ݥƥ�",
+    "name": "�ӡ���&������",
+    "discontinued": false,
+    "allergens": [
+      "����̾",
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�ԥ奢�ݥƥ�",
+    "name": "���ڤ�ҤȤ������åȡ����ۡ��ĥ��α��ȴ��",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "���Ӳ����ȥ���",
+    "name": "���ݤ���ޤ�",
+    "discontinued": true,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "���Ӳ����ȥ���",
+    "name": "�ɥ���",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "���Ӳ����ȥ���",
+    "name": "������꡼�४�˥����JAN�����ɡ�  4514410169852��",
+    "discontinued": true,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "���Ӳ����ȥ���",
+    "name": "������꡼�४�˥���",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "���Ӳ����ȥ���",
+    "name": "����Τ�",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "���Ӳ����ȥ���",
+    "name": "�ǥ�å����ԥ�",
+    "discontinued": true,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "���Ӳ����ȥ���",
+    "name": "�ߤ���ޤ�",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�ݥƥȥ��åץ�",
+    "name": "�Τ��",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "�ݥƥȥ��åץ�",
+    "name": "���㤬����ȱ�",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "�ݥƥȥ��åץ�",
+    "name": "��Υ��󥽥�",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�ݥƥȥ��åץ�",
+    "name": "������å�",
+    "discontinued": false,
+    "allergens": [
+      "���긶����"
+    ]
+  },
+  {
+    "brand": "�ݥƥȥ��åץ�",
+    "name": "�Τ����",
+    "discontinued": false,
+    "allergens": [
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�ݥƥȥ��åץ�",
+    "name": "�ϥˡ����Х���",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�ݥƥȥ��åץ�",
+    "name": "GARAKU���������������ץ��졼̣",
+    "discontinued": true,
+    "allergens": [
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�ݥƥȥ��åץ�",
+    "name": "VIVANT�ݥƥȥ��åץ���ǵ�ڤΤΤ��",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "�ݥƥȥ��åץ�",
+    "name": "VIVANT�ݥƥȥ��åץ������Υ��Х�",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�ݥƥȥ��åץ�",
+    "name": "���ƥ��å��ݥƥȡ��Τ��",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "�ݥƥȥ��åץ�",
+    "name": "���ƥ��å��ݥƥȡ����㤬����ȱ�",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "����ࡼ����",
+    "name": "����ࡼ������åץ����ۥåȥ���̣",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "����ࡼ����",
+    "name": "�ſ�̵�¥���ࡼ���� ���˥����������",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "����ࡼ����",
+    "name": "�µ�����ࡼ���� �㤨��蘆��",
+    "discontinued": false,
+    "allergens": [
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "����ࡼ����",
+    "name": "������VS����ࡼ���硡������㡼�εս�",
+    "discontinued": true,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "����ࡼ����",
+    "name": "���ƥ��å�����ࡼ���硡�ۥåȥ���̣",
+    "discontinued": false,
+    "allergens": [
+      "���긶����"
+    ]
+  },
+  {
+    "brand": "����ࡼ����",
+    "name": "���ƥ��å���Ӥ��ӥ���ࡼ���� �����ޤ蘆��",
+    "discontinued": false,
+    "allergens": [
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "����ࡼ����",
+    "name": "��ä��㥫��ࡼ���硡�ƤΤ�ߤĤ��ե����䡼",
+    "discontinued": true,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "����ࡼ����",
+    "name": "�����᥷ ����ࡼ���� �ɻ�!���ѥ������졼",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "���äѥࡼ����",
+    "name": "���㤬���ޥӥͥ���",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "���äѥࡼ����",
+    "name": "���äѤ���",
+    "discontinued": false,
+    "allergens": [
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "���äѥࡼ����",
+    "name": "��ä��㤹�äѥࡼ���硡�Ƥ��ֲ�����",
+    "discontinued": true,
+    "allergens": [
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "���äѥࡼ����",
+    "name": "���󥰥��ɥ�VS���äѥࡼ���硡�������ʷ�",
+    "discontinued": true,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "��Υݥƥ�",
+    "name": "��ߤĤ���",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "��Υݥƥ�",
+    "name": "��ƻ�Τ��",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "���Ӳ��ե�����",
+    "name": "����β��� �Ƥ���",
+    "discontinued": true,
+    "allergens": [
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "���Ӳ��ե�����",
+    "name": "��̣���ܤ� �����ĤΤ�",
+    "discontinued": true,
+    "allergens": []
+  },
+  {
+    "brand": "��������",
+    "name": "���ʾƤ��Ȥ��������",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "��������",
+    "name": "��ߤĤ��С��٥��塼",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "��������",
+    "name": "�Ȥ����륯���ȥ�������",
+    "discontinued": false,
+    "allergens": [
+      "���긶����"
+    ]
+  },
+  {
+    "brand": "��������",
+    "name": "��Ϸ�ΤȤꤳ",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "��������",
+    "name": "�ߤˤ�ˤ�",
+    "discontinued": true,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "��������",
+    "name": "ǻ������ܥʡ���",
+    "discontinued": true,
+    "allergens": [
+      "����̾",
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�ɥ󥿥���",
+    "name": "�ӡ��ե��꥿����",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "�ɥ󥿥���",
+    "name": "���������꥿����",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�ɥ󥿥���",
+    "name": "�����������꥿����",
+    "discontinued": true,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�ݥ�󥭡�",
+    "name": "���ä��ꥳ����",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�ݥ�󥭡�",
+    "name": "��󤿤�����",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�ݥ�󥭡�",
+    "name": "����å��ꤨ�ӥݥ�󥭡������ӱ�",
+    "discontinued": true,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�ݥ�󥭡�",
+    "name": "���ӱ�",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "��������",
+    "name": "���ƥ���������",
+    "discontinued": true,
+    "allergens": [
+      "����̾",
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "��������",
+    "name": "�ȥ��ե�����",
+    "discontinued": true,
+    "allergens": [
+      "����̾",
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�����Хå�",
+    "name": "���ƥ��å��ݥƥȡ��Τ��",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "�����Хå�",
+    "name": "���ƥ��å��ݥƥȡ���Υ��󥽥�",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�����Хå�",
+    "name": "���ƥ��å�����ࡼ���硡�ۥåȥ���̣",
+    "discontinued": false,
+    "allergens": [
+      "���긶����"
+    ]
+  },
+  {
+    "brand": "�����Хå�",
+    "name": "���ƥ��å����äѥࡼ���� ���äѤ���",
+    "discontinued": false,
+    "allergens": [
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "�����Хå�",
+    "name": "�ԥ奢�ݥƥȡ����ڤ�ҤȤ������åȡ����ۡ��ĥ��α��ȴ��",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "�����Хå�",
+    "name": "���Ӳ��ץ饤�ɥݥƥȡ��ҤȤ������åȡ����Τ��",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "�����Хå�",
+    "name": "���Ӳ��ץ饤�ɥݥƥȡ��ҤȤ������åȡ����ä�����",
+    "discontinued": false,
+    "allergens": [
+      "���긶����",
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "���ĤǤ����å�",
+    "name": "���ƥ��å�����ࡼ���� �ۥåȥ���̣",
+    "discontinued": false,
+    "allergens": [
+      "���긶����"
+    ]
+  },
+  {
+    "brand": "���ĤǤ����å�",
+    "name": "�ȥ�ƥ������åץ�����̣",
+    "discontinued": false,
+    "allergens": [
+      "���긶�����˽ऺ����"
+    ]
+  },
+  {
+    "brand": "PinkyFRESH",
+    "name": "�����θ���ۡ����꡼��ߥ��̣ 90γ",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "PinkyFRESH",
+    "name": "�����θ���ۡ����꡼��ߥ��̣ 60γ",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "PinkyFRESH",
+    "name": "�����θ���ۡ��衼�����̣ 60γ",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "PinkyFRESH",
+    "name": "�����θ���ۡ����졼��̣ 60γ",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "PinkyFRESH",
+    "name": "�����θ���ۡ����꡼��ߥ��̣ ʬ��",
+    "discontinued": false,
+    "allergens": []
+  },
+  {
+    "brand": "������LS1",
+    "name": "�����θ����POWDER �ҥ���������",
+    "discontinued": false,
+    "allergens": []
+  }
+]
