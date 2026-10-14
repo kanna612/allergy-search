@@ -14,11 +14,10 @@ req = urllib.request.Request(
 response = urllib.request.urlopen(req, timeout=15)
 raw_bytes = response.read()
 
-# 【文字化け対策の決定版】
-# 自動判別ではなく、BeautifulSoupの文字コード自動変換機能（UnicodeDammit）に委ねる
-soup = BeautifulSoup(raw_bytes, "html.parser", from_encoding="utf-8")
+# Auto-detect encoding
+soup = BeautifulSoup(raw_bytes, "html.parser", from_encoding="cp932")
 if not soup.find("table"):
-    soup = BeautifulSoup(raw_bytes, "html.parser", from_encoding="cp932")
+    soup = BeautifulSoup(raw_bytes, "html.parser", from_encoding="utf-8")
 
 table = soup.find("table")
 if not table:
@@ -26,74 +25,96 @@ if not table:
 
 rows = table.find_all("tr")
 
-# --- アレルゲンヘッダーの正確な抽出 ---
+# --- Step A: Find the true allergen names header row ---
 headers = []
-# 1行目の th/td をすべて取得
-header_cells = rows[0].find_all(["th", "td"])
-for cell in header_cells:
-    text = cell.get_text(strip=True).replace("\n", "").replace("\r", "").replace(" ", "")
-    # colspanが設定されている場合は、その数だけヘッダーを複製（ズレ防止の要）
-    colspan = int(cell.get("colspan", 1))
-    for _ in range(colspan):
-        headers.append(text)
+for row in rows[:10]:
+    cell_texts = [c.get_text(strip=True) for c in row.find_all(["th", "td"])]
+    # The true allergen row contains '卵' and '小麦'
+    if any(t == "卵" for t in cell_texts) and any(t == "小麦" for t in cell_texts):
+        for cell in row.find_all(["th", "td"]):
+            txt = cell.get_text(strip=True).replace("\n", "").replace("\r", "").strip()
+            colspan = int(cell.get("colspan", 1))
+            for _ in range(colspan):
+                headers.append(txt)
+        break
+
+# If the header row omitted '商品名' due to rowspan, prepend it
+if headers and headers[0] != "商品名":
+    headers.insert(0, "商品名")
+
+# Fallback if table layout changes unexpectedly
+if not headers:
+    headers = [
+        "商品名", "卵", "乳", "小麦", "そば", "落花生", "えび", "かに", "くるみ",
+        "アーモンド", "あわび", "いか", "いくら", "オレンジ", "カシューナッツ", "キウイ",
+        "牛肉", "ごま", "さけ", "さば", "大豆", "鶏肉", "豚肉", "バナナ", "まつたけ",
+        "もも", "やまいも", "りんご", "ゼラチン", "魚介類"
+    ]
+
+print("Detected allergen columns:", headers[1:])
 
 products = []
 current_brand = "その他"
 
-# --- データ行の解析 ---
-for row in rows[1:]:
+# --- Step B: Parse all products and align allergen marks ---
+for row in rows:
     cells = row.find_all(["td", "th"])
     if not cells:
         continue
-    
-    # ブランド行（黄色い行）の判定
-    if len(cells) == 1 or (len(cells) > 0 and cells[0].has_attr("colspan") and int(cells[0].get("colspan", 1)) > 5):
-        current_brand = cells[0].get_text(strip=True)
+
+    cell_texts = [c.get_text(strip=True) for c in cells]
+
+    # Skip header rows
+    if any(t in ["特定原材料", "特定原材料に準ずるもの"] for t in cell_texts):
+        continue
+    if any(t == "卵" for t in cell_texts) and any(t == "小麦" for t in cell_texts):
         continue
 
-    # 商品列の取得
+    # Identify brand rows (yellow section headers)
+    if len(cells) == 1 or (cells[0].has_attr("colspan") and int(cells[0].get("colspan", 1)) > 5):
+        brand_text = cells[0].get_text(strip=True)
+        if brand_text and brand_text not in ["商品名", "アレルギー情報一覧表"]:
+            current_brand = brand_text
+        continue
+
+    # Product Flavor Name
     name_cell = cells[0]
-    flavor_name = name_cell.get_text(strip=True).replace('\u3000', ' ') # 全角スペースを半角に変換
-    
-    if not flavor_name or "商品名" in flavor_name:
+    flavor_name = name_cell.get_text(strip=True).replace('\u3000', ' ')
+    if not flavor_name or flavor_name in ["商品名", "アレルギー情報一覧表"]:
         continue
 
-    # 終売アイコン
+    # Check for discontinued icon (allergie_icon01.gif)
     is_discontinued = bool(name_cell.find("img", src=re.compile(r"allergie_icon01\.gif")))
 
+    # Check for allergen marks (allergie_mark.gif or text symbols)
     allergens = []
-    
-    # 【アレルゲン列ズレ対策の決定版】
-    # HTML上のセルの位置（colspanを考慮）とヘッダーの位置を計算しながらマッピングする
-    current_col_index = 0
-    
+    col_idx = 0
+
     for cell in cells:
         colspan = int(cell.get("colspan", 1))
-        
-        # 商品名の列（通常は先頭の列）はアレルゲンチェックから除外
-        is_name_col = ("商品名" in headers[current_col_index] if current_col_index < len(headers) else False)
-        
-        if not is_name_col and current_col_index < len(headers):
+
+        # Ignore the first column (Product Name)
+        if col_idx > 0 and col_idx < len(headers):
             has_img_mark = bool(cell.find("img", src=re.compile(r"allergie_mark\.gif")))
-            text_mark = cell.get_text(strip=True)
-            
-            # マークがあれば、該当する列のヘッダー名を取得
-            if has_img_mark or "●" in text_mark or "〇" in text_mark:
-                allergen_name = headers[current_col_index]
-                if allergen_name and allergen_name not in ["ブランド", "商品名"]:
+            text_val = cell.get_text(strip=True)
+            has_text_mark = any(m in text_val for m in ["●", "〇", "○", "1", "含む"])
+
+            if has_img_mark or has_text_mark:
+                allergen_name = headers[col_idx]
+                if allergen_name and allergen_name not in ["商品名", "特定原材料", "特定原材料に準ずるもの"]:
                     allergens.append(allergen_name)
-                    
-        current_col_index += colspan
+
+        col_idx += colspan
 
     products.append({
         "brand": current_brand,
         "name": flavor_name,
         "discontinued": is_discontinued,
-        "allergens": list(set(allergens)) # 重複を除外
+        "allergens": list(dict.fromkeys(allergens)) # remove duplicates while preserving order
     })
 
-# JSON保存（UTF-8で強制保存し、ブラウザ側での文字化けを防ぐ）
+# Save as UTF-8 JSON
 with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
     json.dump(products, f, ensure_ascii=False, indent=2)
 
-print(f"Successfully parsed {len(products)} products.")
+print(f"Successfully processed {len(products)} products with accurate allergens.")
