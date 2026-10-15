@@ -52,7 +52,7 @@
         </div>
         <div class="flex items-center gap-2 text-xs">
           <button id="selectAllMajorBtn" class="px-3 py-1.5 rounded-lg border border-slate-300 hover:bg-slate-100 text-slate-600 font-semibold">
-            特定8品目を全選択
+            特定9品目を全選択
           </button>
           <button id="clearAllBtn" class="px-3 py-1.5 rounded-lg border border-slate-300 hover:bg-slate-100 text-slate-600 font-semibold">
             全解除
@@ -60,11 +60,11 @@
         </div>
       </div>
 
-      <!-- 1. 特定原材料（8品目） -->
+      <!-- 1. 特定原材料（9品目） -->
       <div class="mb-5">
         <div class="flex items-center gap-2 mb-2">
           <span class="text-xs font-bold text-red-700 bg-red-100 px-2 py-0.5 rounded">義務表示</span>
-          <h3 class="text-sm font-bold text-slate-700">特定原材料（8品目）</h3>
+          <h3 class="text-sm font-bold text-slate-700">特定原材料9品目）</h3>
         </div>
         <div id="majorAllergenList" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2"></div>
       </div>
@@ -124,9 +124,9 @@
   </div>
 
   <script>
-    const MAJOR_ALLERGENS = ["卵", "乳", "小麦", "そば", "落花生", "えび", "かに", "くるみ"];
+    const MAJOR_ALLERGENS = ["卵", "乳", "小麦", "そば", "落花生", "えび", "かに", "くるみ", "カシューナッツ"];
     const MINOR_ALLERGENS = [
-      "アーモンド", "あわび", "いか", "いくら", "オレンジ", "カシューナッツ", 
+      "アーモンド", "あわび", "いか", "いくら", "オレンジ", "ピスタチオ", 
       "キウイ", "牛肉", "ごま", "さけ", "さば", "大豆", "鶏肉", 
       "バナナ", "豚肉", "まつたけ", "もも", "やまいも", "りんご", 
       "ゼラチン", "魚介類"
